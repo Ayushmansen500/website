@@ -1,0 +1,387 @@
+<!---OTHERS--->
+<link rel="preload" as="image" href="https://wsrv.nl/?url=https://i.ibb.co/dC527XN/Whats-App-14.png&amp;w=400&amp;h=450&amp;fit=contain&amp;output=webp&amp;q=85"><link rel="preload" as="image" href="https://wsrv.nl/?url=https://i.ibb.co/FL5RnmWD/Whats-App-13.png&amp;w=400&amp;h=450&amp;fit=contain&amp;output=webp&amp;q=85"><link rel="preload" as="image" href="https://wsrv.nl/?url=https://i.ibb.co/m504M4B9/IMG-20250315-175642.jpg&amp;w=300&amp;h=200&amp;fit=cover&amp;output=webp&amp;q=80"><link rel="preload" as="image" href="https://wsrv.nl/?url=https://i.ibb.co/GfBSwnnv/IMG-20250405-203213-Copy.jpg&amp;w=300&amp;h=200&amp;fit=cover&amp;output=webp&amp;q=80"><link rel="preload" as="image" href="https://wsrv.nl/?url=https://i.ibb.co/xKc7RC82/IMG-20250405-203901.jpg&amp;w=300&amp;h=200&amp;fit=cover&amp;output=webp&amp;q=80"><link rel="preload" as="image" href="https://wsrv.nl/?url=https://i.ibb.co/VsPypNT/Trendy-Feminine-Photo-Frame-Facebook-Cover.png&amp;w=300&amp;h=200&amp;fit=cover&amp;output=webp&amp;q=80"><style>
+@keyframes cursorMove{0%{top:-30px;left:-50px;opacity:0}20%{top:-30px;left:-50px;opacity:1}50%{top:50%;left:50%;transform:translate(-50%,-50%);opacity:1}60%{top:50%;left:50%;transform:translate(-50%,-50%) scale(0.9);opacity:1}70%{top:50%;left:50%;transform:translate(-50%,-50%) scale(1);opacity:1}90%{top:50%;left:50%;opacity:1}100%{top:50%;left:50%;opacity:0}}
+@keyframes clickRing{0%{transform:translate(-50%,-50%) scale(0);opacity:1}100%{transform:translate(-50%,-50%) scale(2);opacity:0}}
+@keyframes glowPulse{0%{box-shadow:0 4px 15px rgba(255,107,53,0.3)}45%{box-shadow:0 4px 15px rgba(255,107,53,0.3)}50%{box-shadow:0 0 15px #ff6b35,0 0 30px #ff6b35,0 0 50px #ff6b35}65%{box-shadow:0 0 15px #ff6b35,0 0 30px #ff6b35,0 0 50px #ff6b35}75%{box-shadow:0 4px 15px rgba(255,107,53,0.3)}100%{box-shadow:0 4px 15px rgba(255,107,53,0.3)}}
+@keyframes rocketFly{0%{left:5%;top:0;transform:rotate(45deg)}25%{left:28%;top:0}50%{left:50%;top:0}75%{left:72%;top:0}100%{left:92%;top:0;transform:rotate(-45deg)}}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes glow{0%,100%{box-shadow:0 0 5px rgba(255,107,53,0.5)}50%{box-shadow:0 0 25px rgba(255,107,53,0.8)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes textFadeIn{0%{opacity:0;transform:translateY(20px)}10%{opacity:1;transform:translateY(0)}30%{opacity:1;transform:translateY(0)}40%{opacity:0;transform:translateY(-20px)}100%{opacity:0;transform:translateY(-20px)}}
+@keyframes iconFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(5px,-10px)}}
+@keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-8px,-6px)}}
+@keyframes float3{0%,100%{transform:translate(0,0)}50%{transform:translate(6px,8px)}}
+@keyframes float4{0%,100%{transform:translate(0,0)}50%{transform:translate(-5px,10px)}}
+@keyframes float5{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,5px)}}
+@keyframes pulse{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:0.3}50%{transform:translate(-50%,-50%) scale(1.1);opacity:0.5}}
+.step-card{animation:fadeIn 0.5s ease forwards;opacity:0;transition:all 0.3s ease!important}
+.step-card:nth-child(1){animation-delay:0.2s}.step-card:nth-child(2){animation-delay:0.4s}.step-card:nth-child(3){animation-delay:0.6s}.step-card:nth-child(4){animation-delay:0.8s}
+.step-card:hover{transform:translateY(-10px) scale(1.02)!important;border-color:#ff6b35!important;box-shadow:0 20px 40px rgba(255,107,53,0.3)!important}
+.step-num{animation:glow 2s infinite,bounce 2s infinite}
+.rocket-icon{animation:rocketFly 6s ease-in-out infinite}
+.rotating-text{display:inline-block;position:relative;min-width:200px;text-align:left}
+.rotating-text span{position:absolute;left:0;opacity:0;animation:textFadeIn 6s infinite;white-space:nowrap}
+.rotating-text span:nth-child(1){animation-delay:0s}.rotating-text span:nth-child(2){animation-delay:2s}.rotating-text span:nth-child(3){animation-delay:4s}
+.glow-btn{animation:glowPulse 3s ease-in-out infinite!important}
+.why-card{transition:all 0.4s ease!important;animation:fadeIn 0.6s ease forwards;opacity:0}
+.why-card:hover{transform:translateY(-10px)!important;border-color:#ff6b35!important;box-shadow:0 15px 40px rgba(255,107,53,0.25)!important}
+.why-icon{animation:iconFloat 3s ease-in-out infinite}
+.bento-card{transition:all 0.4s ease!important}
+.bento-card:hover{transform:translateY(-5px)!important;box-shadow:0 20px 40px rgba(255,107,53,0.15)!important}
+.testimonial-slide{position:absolute!important;top:0!important;left:0!important;width:100%!important;opacity:0!important;transition:all 0.5s ease!important;transform:translateX(30px)!important}
+.testimonial-slide.active{opacity:1!important;transform:translateX(0)!important;position:relative!important}
+.nav-btn{width:50px!important;height:50px!important;background:rgba(255,255,255,0.1)!important;border:none!important;border-radius:50%!important;color:#fff!important;font-size:24px!important;cursor:pointer!important;transition:all 0.3s ease!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.nav-btn:hover{background:#ff6b35!important}
+.network-avatar{position:absolute!important;border-radius:50%!important;border:3px solid rgba(255,107,53,0.4)!important;box-shadow:0 4px 15px rgba(0,0,0,0.3)!important;transition:all 0.3s ease!important}
+.network-avatar:hover{transform:scale(1.15)!important;border-color:#ff6b35!important;z-index:10!important}
+.av1{animation:float1 4s ease-in-out infinite}.av2{animation:float2 5s ease-in-out infinite}.av3{animation:float3 4.5s ease-in-out infinite}.av4{animation:float4 5.5s ease-in-out infinite}.av5{animation:float5 4s ease-in-out infinite}
+.quote-slide{position:absolute!important;top:0!important;left:0!important;width:100%!important;height:100%!important;opacity:0!important;transition:all 0.6s ease!important;display:flex!important;flex-direction:column!important;justify-content:center!important;padding:35px!important;box-sizing:border-box!important}
+.quote-slide.active{opacity:1!important}
+.stats-img{position:absolute!important;top:0!important;left:0!important;width:100%!important;height:100%!important;object-fit:cover!important;opacity:0!important;transition:opacity 0.8s ease!important;border-radius:20px!important}
+.stats-img.active{opacity:1!important}
+</style><div id="cdh-page" style="background: rgb(10, 10, 10) !important; font-family: 'Plus Jakarta Sans', sans-serif !important; padding: 0px !important; margin: 0px !important;">
+
+<!-- HERO -->
+<div style="color: rgb(255, 255, 255) !important; padding: 60px 25px 20px !important; max-width: 1100px !important; margin: 0px auto !important;">
+  <div style="display:flex!important;flex-wrap:wrap!important;gap:50px!important;align-items:center!important;">
+    <div style="flex:1!important;min-width:300px!important;">
+      <span style="display:inline-block!important;background:rgba(255,107,53,0.15)!important;color:#ff6b35!important;padding:10px 22px!important;border-radius:50px!important;font-size:14px!important;font-weight:600!important;margin-bottom:22px!important;">🔥 Batch-42 Starting Soon</span>
+      <h1 style="font-family:'Space Grotesk',sans-serif!important;font-size:clamp(32px,6vw,48px)!important;font-weight:700!important;line-height:1.15!important;margin:0 0 18px 0!important;color:#fff!important;">Skyrocket Your<br><span class="rotating-text" style="color:#ff6b35!important;height:55px!important;display:inline-block!important;"><span style="color:#ff6b35!important;">Cloud Career</span><span style="color:#ff6b35!important;">DevOps Career</span><span style="color:#ff6b35!important;">AI Career</span></span></h1>
+      <p style="font-size:17px!important;color:#b0b0b0!important;margin:0 0 28px 0!important;line-height:1.7!important;">100% Live, 100% Interactive &amp; 100% Satisfaction Guarantee.</p>
+      <div style="display:flex!important;flex-wrap:wrap!important;gap:12px!important;margin-bottom:28px!important;">
+        <div style="background:rgba(255,255,255,0.05)!important;border:1px solid rgba(255,107,53,0.2)!important;padding:12px 18px!important;border-radius:14px!important;display:flex!important;align-items:center!important;gap:10px!important;"><span style="font-size:20px!important;">🎯</span><div><strong id="countStudents" style="color:#ff6b35!important;font-size:17px!important;">10,000+</strong><br><small style="color:#888!important;font-size:11px!important;">Happy Students</small></div></div>
+        <div style="background:rgba(255,255,255,0.05)!important;border:1px solid rgba(255,107,53,0.2)!important;padding:12px 18px!important;border-radius:14px!important;display:flex!important;align-items:center!important;gap:10px!important;"><span style="font-size:20px!important;">💼</span><div><strong id="countPlaced" style="color:#ff6b35!important;font-size:17px!important;">97%</strong><br><small style="color:#888!important;font-size:11px!important;">Placed</small></div></div>
+        <div style="background:rgba(255,255,255,0.05)!important;border:1px solid rgba(255,107,53,0.2)!important;padding:12px 18px!important;border-radius:14px!important;display:flex!important;align-items:center!important;gap:10px!important;"><span style="font-size:20px!important;">⭐</span><div><strong id="countRating" style="color:#ff6b35!important;font-size:17px!important;">4.9/5</strong><br><small style="color:#888!important;font-size:11px!important;">Rating</small></div></div>
+      </div>
+      <div style="display:flex!important;flex-wrap:wrap!important;gap:14px!important;">
+        <div style="position:relative!important;display:inline-block!important;"><a href="https://www.clouddevopshub.com/courses/batch-42-69328e01f32f9450e82123f3" class="glow-btn" style="background:linear-gradient(135deg,#ff6b35,#e85a2a)!important;color:#fff!important;padding:15px 32px!important;border-radius:50px!important;text-decoration:none!important;font-weight:700!important;font-size:16px!important;display:inline-block!important;" title="">🚀 Enroll Now</a><div style="position:absolute!important;width:24px!important;height:24px!important;pointer-events:none!important;animation:cursorMove 3s ease-in-out infinite!important;z-index:100!important;"><svg viewBox="0 0 24 24" fill="none" style="width:24px!important;height:24px!important;"><path d="M5 2l14 11-6 1.5-3.5 6L5 2z" fill="#fff" stroke="#000" stroke-width="1"></path></svg></div><div style="position:absolute!important;top:50%!important;left:50%!important;width:30px!important;height:30px!important;border:3px solid #fff!important;border-radius:50%!important;pointer-events:none!important;animation:clickRing 3s ease-out infinite!important;animation-delay:1.5s!important;opacity:0!important;"></div></div>
+        <a href="https://chat.whatsapp.com/HtdFsTVrYYwLe5uGUWcCqA" style="background:transparent!important;color:#ff6b35!important;padding:15px 32px!important;border-radius:50px!important;text-decoration:none!important;font-weight:700!important;font-size:16px!important;border:2px solid #ff6b35!important;">💬 WhatsApp</a>
+      </div>
+    </div>
+    <div style="flex:1!important;min-width:300px!important;text-align:center!important;">
+      <div style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.2)!important;border-radius:24px!important;overflow:hidden!important;">
+        <div style="position:relative!important;height:300px!important;background:linear-gradient(180deg,rgba(255,107,53,0.15) 0%,transparent 100%)!important;display:flex!important;align-items:flex-end!important;justify-content:center!important;">
+          <div style="position:absolute!important;top:50%!important;left:50%!important;transform:translate(-50%,-50%)!important;width:230px!important;height:230px!important;background:linear-gradient(135deg,#ff6b35,#ff9f1c)!important;border-radius:50%!important;z-index:1!important;"></div>
+          <img id="heroImg1" src="https://wsrv.nl/?url=https://i.ibb.co/dC527XN/Whats-App-14.png&amp;w=400&amp;h=450&amp;fit=contain&amp;output=webp&amp;q=85" alt="Vikas 1" loading="eager" style="opacity: 1; position: relative !important; z-index: 2 !important; width: 260px !important; height: 300px !important; object-fit: cover !important; object-position: center top !important; transition: opacity 0.8s !important;">
+          <img id="heroImg2" src="https://wsrv.nl/?url=https://i.ibb.co/FL5RnmWD/Whats-App-13.png&amp;w=400&amp;h=450&amp;fit=contain&amp;output=webp&amp;q=85" alt="Vikas 2" loading="eager" style="opacity: 0; position: absolute !important; bottom: 0px !important; left: 50% !important; transform: translateX(-50%) !important; z-index: 2 !important; width: 260px !important; height: 300px !important; object-fit: cover !important; object-position: center top !important; transition: opacity 0.8s !important;">
+        </div>
+        <div style="padding:22px!important;background:rgba(0,0,0,0.3)!important;">
+          <p style="color:#888!important;font-size:14px!important;margin:0 0 6px 0!important;">Batch-42 Starts In</p>
+          <p style="color:#ff6b35!important;font-size:18px!important;font-weight:700!important;margin:0 0 16px 0!important;">📅 18th December 2025</p>
+          <div style="display:flex!important;justify-content:center!important;gap:10px!important;margin-bottom:14px!important;">
+            <div style="background:rgba(255,107,53,0.1)!important;padding:12px 14px!important;border-radius:12px!important;text-align:center!important;"><span id="days" style="font-family:'Space Grotesk',sans-serif!important;font-size:24px!important;font-weight:700!important;color:#ff6b35!important;display:block!important;">01</span><small style="font-size:10px!important;color:#888!important;">Days</small></div>
+            <div style="background:rgba(255,107,53,0.1)!important;padding:12px 14px!important;border-radius:12px!important;text-align:center!important;"><span id="hours" style="font-family:'Space Grotesk',sans-serif!important;font-size:24px!important;font-weight:700!important;color:#ff6b35!important;display:block!important;">13</span><small style="font-size:10px!important;color:#888!important;">Hrs</small></div>
+            <div style="background:rgba(255,107,53,0.1)!important;padding:12px 14px!important;border-radius:12px!important;text-align:center!important;"><span id="minutes" style="font-family:'Space Grotesk',sans-serif!important;font-size:24px!important;font-weight:700!important;color:#ff6b35!important;display:block!important;">07</span><small style="font-size:10px!important;color:#888!important;">Min</small></div>
+            <div style="background:rgba(255,107,53,0.1)!important;padding:12px 14px!important;border-radius:12px!important;text-align:center!important;"><span id="seconds" style="font-family:'Space Grotesk',sans-serif!important;font-size:24px!important;font-weight:700!important;color:#ff6b35!important;display:block!important;">53</span><small style="font-size:10px!important;color:#888!important;">Sec</small></div>
+          </div>
+          <div style="border-top:1px solid rgba(255,107,53,0.15)!important;padding-top:12px!important;font-size:12px!important;color:#888!important;">🕐 <strong style="color:#fff!important;">8-9:30AM</strong> | ⏱️ <strong style="color:#fff!important;">2.5 Months</strong>| 📹 <strong style="color:#fff!important;">1000 Days</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST BADGES -->
+<div style="color: rgb(255, 255, 255) !important; background: rgb(17, 17, 17) !important; padding: 35px 25px !important; margin-top: 50px !important; border-top: 1px solid rgba(255, 107, 53, 0.1) !important; border-bottom: 1px solid rgba(255, 107, 53, 0.1) !important;">
+  <div style="max-width:1100px!important;margin:0 auto!important;display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:30px!important;text-align:center!important;">
+    <div><span style="font-size:28px!important;display:block!important;margin-bottom:6px!important;">🎥</span><strong style="color:#fff!important;font-size:14px!important;">100% Live</strong></div>
+    <div><span style="font-size:28px!important;display:block!important;margin-bottom:6px!important;">💻</span><strong style="color:#fff!important;font-size:14px!important;">Hands-On</strong></div>
+    <div><span style="font-size:28px!important;display:block!important;margin-bottom:6px!important;">💼</span><strong style="color:#fff!important;font-size:14px!important;">Job-Oriented</strong></div>
+    <div><span style="font-size:28px!important;display:block!important;margin-bottom:6px!important;">🎯</span><strong style="color:#fff!important;font-size:14px!important;">Interactive</strong></div>
+    <div><span style="font-size:28px!important;display:block!important;margin-bottom:6px!important;">✅</span><strong style="color:#fff!important;font-size:14px!important;">Satisfaction</strong></div>
+    <div><span style="font-size:28px!important;display:block!important;margin-bottom:6px!important;">👨‍🏫</span><strong style="color:#fff!important;font-size:14px!important;">Expert</strong></div>
+  </div>
+</div>
+
+<!-- 4 STEPS -->
+<div style="color: rgb(255, 255, 255) !important; padding: 60px 25px !important; max-width: 1100px !important; margin: 0px auto !important;">
+  <div style="text-align:center!important;margin-bottom:45px!important;">
+    <span style="background:rgba(255,107,53,0.15)!important;color:#ff6b35!important;padding:8px 20px!important;border-radius:50px!important;font-size:14px!important;font-weight:600!important;">Getting Started</span>
+    <h2 style="font-family:'Space Grotesk',sans-serif!important;font-size:clamp(26px,5vw,38px)!important;color:#fff!important;margin:16px 0 0 0!important;">🚀 Your Journey to High-Package</h2>
+  </div>
+  <div style="position:relative!important;padding-top:50px!important;">
+    <div class="rocket-icon" style="position:absolute!important;top:0!important;font-size:30px!important;z-index:10!important;filter:drop-shadow(0 0 10px rgba(255,107,53,0.8))!important;">🚀</div>
+    <div style="position:absolute!important;top:24px!important;left:10%!important;right:10%!important;height:3px!important;background:repeating-linear-gradient(90deg,#ff6b35 0px,#ff6b35 10px,transparent 10px,transparent 20px)!important;opacity:0.5!important;"></div>
+    <div style="display:grid!important;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))!important;gap:20px!important;margin-top:35px!important;">
+      <div class="step-card" style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.2)!important;border-radius:18px!important;padding:28px 20px!important;text-align:center!important;"><div class="step-num" style="width:50px!important;height:50px!important;background:linear-gradient(135deg,#ff6b35,#ff9f1c)!important;border-radius:50%!important;display:flex!important;align-items:center!important;justify-content:center!important;margin:-48px auto 16px auto!important;font-weight:700!important;color:#fff!important;font-size:20px!important;border:4px solid #0a0a0a!important;">1</div><h3 style="color:#fff!important;font-size:17px!important;margin:0 0 8px 0!important;">Join WhatsApp</h3><p style="color:#888!important;font-size:13px!important;margin:0 0 16px 0!important;">Get updates</p><a href="https://chat.whatsapp.com/HtdFsTVrYYwLe5uGUWcCqA" style="background:linear-gradient(135deg,#ff6b35,#e85a2a)!important;color:#fff!important;font-weight:600!important;font-size:13px!important;text-decoration:none!important;padding:10px 24px!important;border-radius:50px!important;display:inline-block!important;">Join →</a></div>
+      <div class="step-card" style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.2)!important;border-radius:18px!important;padding:28px 20px!important;text-align:center!important;"><div class="step-num" style="width:50px!important;height:50px!important;background:linear-gradient(135deg,#ff6b35,#ff9f1c)!important;border-radius:50%!important;display:flex!important;align-items:center!important;justify-content:center!important;margin:-48px auto 16px auto!important;font-weight:700!important;color:#fff!important;font-size:20px!important;border:4px solid #0a0a0a!important;">2</div><h3 style="color:#fff!important;font-size:17px!important;margin:0 0 8px 0!important;">Join Zoom</h3><p style="color:#888!important;font-size:13px!important;margin:0 0 16px 0!important;">Live demo</p><a href="https://us02web.zoom.us/meeting/register/tZ0uceurqzItEtJCi-qNoYKsyl_3K2gURlW4" style="background:linear-gradient(135deg,#ff6b35,#e85a2a)!important;color:#fff!important;font-weight:600!important;font-size:13px!important;text-decoration:none!important;padding:10px 24px!important;border-radius:50px!important;display:inline-block!important;">Register →</a></div>
+      <div class="step-card" style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.2)!important;border-radius:18px!important;padding:28px 20px!important;text-align:center!important;"><div class="step-num" style="width:50px!important;height:50px!important;background:linear-gradient(135deg,#ff6b35,#ff9f1c)!important;border-radius:50%!important;display:flex!important;align-items:center!important;justify-content:center!important;margin:-48px auto 16px auto!important;font-weight:700!important;color:#fff!important;font-size:20px!important;border:4px solid #0a0a0a!important;">3</div><h3 style="color:#fff!important;font-size:17px!important;margin:0 0 8px 0!important;">Connect 1-on-1</h3><p style="color:#888!important;font-size:13px!important;margin:0 0 16px 0!important;">Any enquiry</p><a href="tel:+919111698200" style="background:linear-gradient(135deg,#ff6b35,#e85a2a)!important;color:#fff!important;font-weight:600!important;font-size:13px!important;text-decoration:none!important;padding:10px 24px!important;border-radius:50px!important;display:inline-block!important;">Call →</a></div>
+      <div class="step-card" style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.2)!important;border-radius:18px!important;padding:28px 20px!important;text-align:center!important;"><div class="step-num" style="width:50px!important;height:50px!important;background:linear-gradient(135deg,#ff6b35,#ff9f1c)!important;border-radius:50%!important;display:flex!important;align-items:center!important;justify-content:center!important;margin:-48px auto 16px auto!important;font-weight:700!important;color:#fff!important;font-size:20px!important;border:4px solid #0a0a0a!important;">4</div><h3 style="color:#fff!important;font-size:17px!important;margin:0 0 8px 0!important;">🎯 Enroll</h3><p style="color:#888!important;font-size:13px!important;margin:0 0 16px 0!important;">Start journey</p><a href="https://www.clouddevopshub.com/courses/batch-42-69328e01f32f9450e82123f3" style="background:linear-gradient(135deg,#ff6b35,#e85a2a)!important;color:#fff!important;font-weight:600!important;font-size:13px!important;text-decoration:none!important;padding:10px 24px!important;border-radius:50px!important;display:inline-block!important;" title="">Enroll →</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- BATCH DETAILS SECTION -->
+<div style="color: rgb(255, 255, 255) !important; background: rgb(10, 10, 10) !important; padding: 60px 25px !important;">
+  <div style="max-width: 1100px !important; margin: 0px auto !important;">
+    <div style="display: flex !important; flex-wrap: wrap !important; gap: 40px !important; align-items: center !important;">
+      
+      <!-- Left Side - Image -->
+      <div style="flex: 1 !important; min-width: 300px !important;">
+        <img src="https://i.ibb.co/9Mg6t2G/Your-paragraph-text-2.png" alt="Batch 42 - New Batch Loading" style="width: 84.9057%; max-width: 450px !important; border-radius: 18px !important; box-shadow: rgba(255, 107, 53, 0.2) 0px 15px 50px !important; display: block !important; visibility: visible !important; height: auto;">
+      </div>
+      
+      <!-- Right Side - Content -->
+      <div style="flex: 1 !important; min-width: 300px !important;">
+        <h2 style="font-family: 'Space Grotesk', sans-serif !important; font-size: clamp(24px, 4.5vw, 36px) !important; font-weight: 700 !important; color: #fff !important; margin: 0 0 4px 0 !important; line-height: 1.2 !important;">Multi-Cloud + DevOps with AI</h2>
+        <h3 style="font-family: 'Space Grotesk', sans-serif !important; font-size: clamp(20px, 3.5vw, 30px) !important; font-weight: 700 !important; color: #ff6b35 !important; margin: 0 0 4px 0 !important;">LAKSHYA - Batch 42</h3>
+        
+        <p style="color: #b0b0b0 !important; font-size: 16px !important; margin: 0 0 24px 0 !important; line-height: 1.6 !important;">Master AWS, Azure, GCP + Top 10 DevOps tool with AI</p>
+        
+        <!-- Features List -->
+        <div style="display: flex !important; flex-direction: column !important; gap: 14px !important; margin-bottom: 28px !important;">
+          <div style="display: flex !important; align-items: flex-start !important; gap: 10px !important;">
+            <span style="color: #ff6b35 !important; font-size: 18px !important; margin-top: 2px !important;">✓</span>
+            <p style="color: #fff !important; font-size: 14px !important; margin: 0 !important; line-height: 1.5 !important;"><strong style="color: #ff6b35 !important;">55 Days Live Intensive Training</strong> — Daily Sessions (Mon-Sat, 8-9:30 AM IST)</p>
+          </div>
+          <div style="display: flex !important; align-items: flex-start !important; gap: 10px !important;">
+            <span style="color: #ff6b35 !important; font-size: 18px !important; margin-top: 2px !important;">✓</span>
+            <p style="color: #fff !important; font-size: 14px !important; margin: 0 !important; line-height: 1.5 !important;"><strong style="color: #ff6b35 !important;">Live Doubt-Solving &amp; Mentorship Sessions</strong> — Every Day</p>
+          </div>
+          <div style="display: flex !important; align-items: flex-start !important; gap: 10px !important;">
+            <span style="color: #ff6b35 !important; font-size: 18px !important; margin-top: 2px !important;">✓</span>
+            <p style="color: #fff !important; font-size: 14px !important; margin: 0 !important; line-height: 1.5 !important;"><strong style="color: #ff6b35 !important;">Start Date:</strong> Live classes begin on <strong style="color: #fff !important;">18th December 2025</strong></p>
+          </div>
+          <div style="display: flex !important; align-items: flex-start !important; gap: 10px !important;">
+            <span style="color: #ff6b35 !important; font-size: 18px !important; margin-top: 2px !important;">✓</span>
+            <p style="color: #fff !important; font-size: 14px !important; margin: 0 !important; line-height: 1.5 !important;"><strong style="color: #ff6b35 !important;">Bonus Worth ₹20,000 — FREE</strong> <span style="color: #b0b0b0 !important;">(Resume Building, Interview Prep, LinkedIn Optimization, Premium Workshop Access, Career Strategy Session)</span></p>
+          </div>
+          <div style="display: flex !important; align-items: flex-start !important; gap: 10px !important;">
+            <span style="color: #ff6b35 !important; font-size: 18px !important; margin-top: 2px !important;">✓</span>
+            <p style="color: #fff !important; font-size: 14px !important; margin: 0 !important; line-height: 1.5 !important;"><strong style="color: #ff6b35 !important;">1000 Day's Recordings Access</strong> — All class recordings available same day</p>
+          </div>
+          <div style="display: flex !important; align-items: flex-start !important; gap: 10px !important;">
+            <span style="color: #ff6b35 !important; font-size: 18px !important; margin-top: 2px !important;">✓</span>
+            <p style="color: #fff !important; font-size: 14px !important; margin: 0 !important; line-height: 1.5 !important;"><strong style="color: #ff6b35 !important;">Language:</strong> Hinglish (Hindi + English)</p>
+          </div>
+          <div style="display: flex !important; align-items: flex-start !important; gap: 10px !important;">
+            <span style="color: #ff6b35 !important; font-size: 18px !important; margin-top: 2px !important;">✓</span>
+            <p style="color: #fff !important; font-size: 14px !important; margin: 0 !important; line-height: 1.5 !important;"><strong style="color: #ff6b35 !important;">MNC Referrals Included</strong> — Direct referrals to Top MNCs companies</p>
+          </div>
+        </div>
+        
+        <!-- CTA -->
+        <p style="color: #ff6b35 !important; font-size: 17px !important; font-weight: 600 !important; margin: 0 0 16px 0 !important; font-style: italic !important;">Join now — Early Bird Offer, limited seats!</p>
+        <a href="https://www.clouddevopshub.com/courses/batch-42-69328e01f32f9450e82123f3" style="background: linear-gradient(135deg, #ff6b35, #e85a2a) !important; color: #fff !important; padding: 14px 32px !important; border-radius: 50px !important; text-decoration: none !important; font-weight: 700 !important; font-size: 16px !important; display: inline-block !important; border: none !important; box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4) !important; transition: all 0.3s ease !important;">Enroll Now</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- SYLLABUS -->
+<div style="color: rgb(255, 255, 255) !important; background: rgb(17, 17, 17) !important; padding: 60px 25px !important;">
+  <div style="max-width:1100px!important;margin:0 auto!important;">
+    <div style="text-align:center!important;margin-bottom:40px!important;">
+      <span style="background:rgba(255,107,53,0.15)!important;color:#ff6b35!important;padding:8px 20px!important;border-radius:50px!important;font-size:14px!important;font-weight:600!important;">55 Days Curriculum</span>
+      <h2 style="font-family:'Space Grotesk',sans-serif!important;font-size:clamp(26px,5vw,38px)!important;color:#fff!important;margin:16px 0 0 0!important;">10 Power-Packed Modules</h2>
+    </div>
+    <div style="display:grid!important;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))!important;gap:14px!important;">
+      <div style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.1)!important;border-radius:14px!important;padding:18px!important;display:flex!important;gap:14px!important;"><div style="width:38px!important;height:38px!important;min-width:38px!important;background:linear-gradient(135deg,#ff6b35,#ff9f1c)!important;border-radius:10px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-weight:700!important;color:#fff!important;font-size:15px!important;">1</div><div><strong style="color:#fff!important;font-size:15px!important;">Multi-Cloud + DevOps</strong><br><small style="color:#888!important;font-size:12px!important;">Principles &amp; lifecycle</small></div></div>
+      <div style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.1)!important;border-radius:14px!important;padding:18px!important;display:flex!important;gap:14px!important;"><div style="width:38px!important;height:38px!important;min-width:38px!important;background:linear-gradient(135deg,#ff6b35,#ff9f1c)!important;border-radius:10px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-weight:700!important;color:#fff!important;font-size:15px!important;">2</div><div><strong style="color:#fff!important;font-size:15px!important;">Linux Administration</strong><br><small style="color:#888!important;font-size:12px!important;">Systems &amp; scripting</small></div></div>
+      <div style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.1)!important;border-radius:14px!important;padding:18px!important;display:flex!important;gap:14px!important;"><div style="width:38px!important;height:38px!important;min-width:38px!important;background:linear-gradient(135deg,#ff6b35,#ff9f1c)!important;border-radius:10px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-weight:700!important;color:#fff!important;font-size:15px!important;">3</div><div><strong style="color:#fff!important;font-size:15px!important;">AWS Top 10 Services</strong><br><small style="color:#888!important;font-size:12px!important;">IAM, EC2, S3, RDS, VPC</small></div></div>
+      <div style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.1)!important;border-radius:14px!important;padding:18px!important;display:flex!important;gap:14px!important;"><div style="width:38px!important;height:38px!important;min-width:38px!important;background:linear-gradient(135deg,#ff6b35,#ff9f1c)!important;border-radius:10px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-weight:700!important;color:#fff!important;font-size:15px!important;">4</div><div><strong style="color:#fff!important;font-size:15px!important;">Git &amp; Jenkins CI/CD</strong><br><small style="color:#888!important;font-size:12px!important;">Build pipelines</small></div></div>
+      <div style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.1)!important;border-radius:14px!important;padding:18px!important;display:flex!important;gap:14px!important;"><div style="width:38px!important;height:38px!important;min-width:38px!important;background:linear-gradient(135deg,#ff6b35,#ff9f1c)!important;border-radius:10px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-weight:700!important;color:#fff!important;font-size:15px!important;">5</div><div><strong style="color:#fff!important;font-size:15px!important;">Docker &amp; K8s + GCP</strong><br><small style="color:#888!important;font-size:12px!important;">Containers</small></div></div>
+      <div style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.1)!important;border-radius:14px!important;padding:18px!important;display:flex!important;gap:14px!important;"><div style="width:38px!important;height:38px!important;min-width:38px!important;background:linear-gradient(135deg,#ff6b35,#ff9f1c)!important;border-radius:10px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-weight:700!important;color:#fff!important;font-size:15px!important;">6</div><div><strong style="color:#fff!important;font-size:15px!important;">Ansible &amp; Terraform</strong><br><small style="color:#888!important;font-size:12px!important;">Infrastructure automation</small></div></div>
+      <div style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.1)!important;border-radius:14px!important;padding:18px!important;display:flex!important;gap:14px!important;"><div style="width:38px!important;height:38px!important;min-width:38px!important;background:linear-gradient(135deg,#ff6b35,#ff9f1c)!important;border-radius:10px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-weight:700!important;color:#fff!important;font-size:15px!important;">7</div><div><strong style="color:#fff!important;font-size:15px!important;">Monitoring Tools</strong><br><small style="color:#888!important;font-size:12px!important;">Prometheus, Grafana</small></div></div>
+      <div style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.1)!important;border-radius:14px!important;padding:18px!important;display:flex!important;gap:14px!important;"><div style="width:38px!important;height:38px!important;min-width:38px!important;background:linear-gradient(135deg,#ff6b35,#ff9f1c)!important;border-radius:10px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-weight:700!important;color:#fff!important;font-size:15px!important;">8</div><div><strong style="color:#fff!important;font-size:15px!important;">Bash &amp; Python</strong><br><small style="color:#888!important;font-size:12px!important;">Scripting</small></div></div>
+      <div style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.1)!important;border-radius:14px!important;padding:18px!important;display:flex!important;gap:14px!important;"><div style="width:38px!important;height:38px!important;min-width:38px!important;background:linear-gradient(135deg,#ff6b35,#ff9f1c)!important;border-radius:10px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-weight:700!important;color:#fff!important;font-size:15px!important;">9</div><div><strong style="color:#fff!important;font-size:15px!important;">Live MNC Projects</strong><br><small style="color:#888!important;font-size:12px!important;">6 Real-world</small></div></div>
+      <div style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.1)!important;border-radius:14px!important;padding:18px!important;display:flex!important;gap:14px!important;"><div style="width:38px!important;height:38px!important;min-width:38px!important;background:linear-gradient(135deg,#ff6b35,#ff9f1c)!important;border-radius:10px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-weight:700!important;color:#fff!important;font-size:14px!important;">10</div><div><strong style="color:#fff!important;font-size:15px!important;">Job-Ready Hacks</strong><br><small style="color:#888!important;font-size:12px!important;">Mock interviews</small></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY CLOUDDEVOPSHUB -->
+<div style="padding: 60px 25px !important; background: rgb(10, 10, 10) !important;">
+  <div style="max-width: 1100px !important; margin: 0px auto !important;">
+    <div style="color: rgb(255, 255, 255) !important; text-align: center !important; margin-bottom: 45px !important;">
+      <span style="background:rgba(255,107,53,0.15)!important;color:#ff6b35!important;padding:8px 20px!important;border-radius:50px!important;font-size:14px!important;font-weight:600!important;">Why Choose Us</span>
+      <h2 style="font-family:'Space Grotesk',sans-serif!important;font-size:clamp(26px,5vw,38px)!important;color:#fff!important;margin:16px 0 0 0!important;">Why <span style="color:#ff6b35!important;">CloudDevOpsHub</span>?</h2>
+    </div>
+    <div style="display: grid !important; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important; gap: 20px !important;">
+      <div class="why-card" style="color: rgb(255, 255, 255) !important; background: rgba(255, 255, 255, 0.03) !important; border: 2px solid rgba(255, 107, 53, 0.15) !important; border-radius: 20px !important; padding: 28px !important; text-align: center !important;"><div class="why-icon" style="width:70px!important;height:70px!important;background:linear-gradient(135deg,rgba(255,107,53,0.15),rgba(255,159,28,0.1))!important;border-radius:16px!important;display:flex!important;align-items:center!important;justify-content:center!important;margin:0 auto 16px auto!important;border:2px solid rgba(255,107,53,0.3)!important;"><span style="font-size:32px!important;">🎥</span></div><h3 style="color:#fff!important;font-size:18px!important;margin:0 0 10px 0!important;"><span style="color:#ff6b35!important;">100% Live</span> Sessions</h3><p style="color:#888!important;font-size:14px!important;margin:0!important;">No pre-recorded. Real-time Q&amp;A.</p></div>
+      <div class="why-card" style="color: rgb(255, 255, 255) !important; background: rgba(255, 255, 255, 0.03) !important; border: 2px solid rgba(255, 107, 53, 0.15) !important; border-radius: 20px !important; padding: 28px !important; text-align: center !important;"><div class="why-icon" style="width:70px!important;height:70px!important;background:linear-gradient(135deg,rgba(255,107,53,0.15),rgba(255,159,28,0.1))!important;border-radius:16px!important;display:flex!important;align-items:center!important;justify-content:center!important;margin:0 auto 16px auto!important;border:2px solid rgba(255,107,53,0.3)!important;"><span style="font-size:32px!important;">♾️</span></div><h3 style="color:#fff!important;font-size:18px!important;margin:0 0 10px 0!important;"><span style="color:#ff6b35!important;">1000 Days</span> Access</h3><p style="color:#888!important;font-size:14px!important;margin:0!important;">Revisit anytime, anywhere.</p></div>
+      <div class="why-card" style="color: rgb(255, 255, 255) !important; background: rgba(255, 255, 255, 0.03) !important; border: 2px solid rgba(255, 107, 53, 0.15) !important; border-radius: 20px !important; padding: 28px !important; text-align: center !important;"><div class="why-icon" style="width:70px!important;height:70px!important;background:linear-gradient(135deg,rgba(255,107,53,0.15),rgba(255,159,28,0.1))!important;border-radius:16px!important;display:flex!important;align-items:center!important;justify-content:center!important;margin:0 auto 16px auto!important;border:2px solid rgba(255,107,53,0.3)!important;"><span style="font-size:32px!important;">🚀</span></div><h3 style="color:#fff!important;font-size:18px!important;margin:0 0 10px 0!important;"><span style="color:#ff6b35!important;">Free</span> Upgrades</h3><p style="color:#888!important;font-size:14px!important;margin:0!important;">Unlimited content updates.</p></div>
+      <div class="why-card" style="background: rgba(255, 255, 255, 0.03) !important; border: 2px solid rgba(255, 107, 53, 0.15) !important; border-radius: 20px !important; padding: 28px !important; text-align: center !important;"><div class="why-icon" style="color: rgb(255, 255, 255) !important; width: 70px !important; height: 70px !important; background: linear-gradient(135deg, rgba(255, 107, 53, 0.15), rgba(255, 159, 28, 0.1)) !important; border-radius: 16px !important; display: flex !important; align-items: center !important; justify-content: center !important; margin: 0px auto 16px !important; border: 2px solid rgba(255, 107, 53, 0.3) !important;"><span style="font-size:32px!important;">🙋</span></div><h3 style="color: rgb(255, 255, 255) !important; font-size: 18px !important; margin: 0px 0px 10px !important;"><span style="color:#ff6b35!important;">Solve</span> All Your Doubts</h3><p style="color: rgb(136, 136, 136) !important; font-size: 14px !important; margin: 0px !important;">With Live Sessions</p></div>
+      <div class="why-card" style="color: rgb(255, 255, 255) !important; background: rgba(255, 255, 255, 0.03) !important; border: 2px solid rgba(255, 107, 53, 0.15) !important; border-radius: 20px !important; padding: 28px !important; text-align: center !important;"><div class="why-icon" style="width:70px!important;height:70px!important;background:linear-gradient(135deg,rgba(255,107,53,0.15),rgba(255,159,28,0.1))!important;border-radius:16px!important;display:flex!important;align-items:center!important;justify-content:center!important;margin:0 auto 16px auto!important;border:2px solid rgba(255,107,53,0.3)!important;"><span style="font-size:32px!important;">👥</span></div><h3 style="color:#fff!important;font-size:18px!important;margin:0 0 10px 0!important;"><span style="color:#ff6b35!important;">75K+</span> Community</h3><p style="color:#888!important;font-size:14px!important;margin:0!important;">Cloud and DevOps community.</p></div>
+      <div class="why-card" style="color: rgb(255, 255, 255) !important; background: rgba(255, 255, 255, 0.03) !important; border: 2px solid rgba(255, 107, 53, 0.15) !important; border-radius: 20px !important; padding: 28px !important; text-align: center !important;"><div class="why-icon" style="width:70px!important;height:70px!important;background:linear-gradient(135deg,rgba(255,107,53,0.15),rgba(255,159,28,0.1))!important;border-radius:16px!important;display:flex!important;align-items:center!important;justify-content:center!important;margin:0 auto 16px auto!important;border:2px solid rgba(255,107,53,0.3)!important;"><span style="font-size:32px!important;">💰</span></div><h3 style="color:#fff!important;font-size:18px!important;margin:0 0 10px 0!important;"><span style="color:#ff6b35!important;">Affordable</span></h3><p style="color:#888!important;font-size:14px!important;margin:0!important;">Best ROI for career.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- STUDENT TESTIMONIALS -->
+<div style="color: rgb(255, 255, 255) !important; padding: 60px 25px !important; background: rgb(10, 10, 10) !important;">
+  <div style="max-width:1100px!important;margin:0 auto!important;">
+    <div style="text-align:center!important;margin-bottom:45px!important;">
+      <span style="background:rgba(255,107,53,0.15)!important;color:#ff6b35!important;padding:8px 20px!important;border-radius:50px!important;font-size:14px!important;font-weight:600!important;">Success Stories</span>
+      <h2 style="font-family:'Space Grotesk',sans-serif!important;font-size:clamp(26px,5vw,38px)!important;color:#fff!important;margin:16px 0 0 0!important;">From Our <span style="color:#ff6b35!important;">Students</span></h2>
+      <p style="color:#888!important;font-size:15px!important;margin:12px 0 0 0!important;">Across <span style="color:#ff6b35!important;font-weight:700!important;">41 Batches</span></p>
+    </div>
+    
+    <div style="display:grid!important;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))!important;gap:20px!important;">
+      
+      <!-- Card 1: TESTIMONIAL SLIDER -->
+      <div class="bento-card" style="background:linear-gradient(180deg,#1a1a2e 0%,#0f0f1a 100%)!important;border-radius:20px!important;padding:28px!important;min-height:340px!important;position:relative!important;overflow:hidden!important;">
+        <div id="testimonialSlider" style="position:relative!important;min-height:290px!important;">
+          <div class="testimonial-slide" data-slide="0">
+            <div style="font-family:'Space Grotesk',sans-serif!important;font-size:clamp(36px,6vw,46px)!important;font-weight:700!important;color:#ff6b35!important;">25 LPA+</div>
+            <div style="color:#888!important;font-size:12px!important;margin-bottom:16px!important;">Package after course</div>
+            <p style="color:#ccc!important;font-size:14px!important;line-height:1.6!important;margin:0 0 22px 0!important;">"The course transformed my career completely. From 8 LPA to 25+ LPA in just 6 months."</p>
+            <div style="display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;">
+              <div><strong style="color:#fff!important;font-size:15px!important;display:block!important;">Prasad Amaravathi</strong><small style="color:#888!important;font-size:12px!important;">DevOps Engineer </small></div>
+              <img src="https://i.ibb.co/84NYPQPn/Screenshot-2025-12-06-033948.png" alt="Rahul" style="width:70px!important;height:80px!important;object-fit:cover!important;border-radius:14px!important;border:2px solid rgba(255,107,53,0.3)!important;">
+            </div>
+          </div>
+          <div class="testimonial-slide active" data-slide="1">
+            <div style="font-family:'Space Grotesk',sans-serif!important;font-size:clamp(36px,6vw,46px)!important;font-weight:700!important;color:#ff6b35!important;">35 LPA+</div>
+            <div style="color:#888!important;font-size:12px!important;margin-bottom:16px!important;">Package after course</div>
+            <p style="color:#ccc!important;font-size:14px!important;line-height:1.6!important;margin:0 0 22px 0!important;">"Got placed at Microsoft! The hands-on labs and real projects made all the difference."</p>
+            <div style="display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;">
+              <div><strong style="color:#fff!important;font-size:15px!important;display:block!important;">Neha Choudhaary</strong><small style="color:#888!important;font-size:12px!important;">Cloud Engineer </small></div>
+              <img src="https://i.ibb.co/WNDWKx5R/Screenshot-2025-12-06-033614.png" alt="Neha" style="width:70px!important;height:80px!important;object-fit:cover!important;border-radius:14px!important;border:2px solid rgba(255,107,53,0.3)!important;">
+            </div>
+          </div>
+          <div class="testimonial-slide" data-slide="2">
+            <div style="font-family:'Space Grotesk',sans-serif!important;font-size:clamp(36px,6vw,46px)!important;font-weight:700!important;color:#ff6b35!important;">18 LPA</div>
+            <div style="color:#888!important;font-size:12px!important;margin-bottom:16px!important;">Fresher to Pro</div>
+            <p style="color:#ccc!important;font-size:14px!important;line-height:1.6!important;margin:0 0 22px 0!important;">"From fresher to 18 LPA package! Interview prep module was incredibly helpful."</p>
+            <div style="display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;">
+              <div><strong style="color:#fff!important;font-size:15px!important;display:block!important;"> Janhavi Lashkari</strong><small style="color:#888!important;font-size:12px!important;">Cloud &amp; DevOps Engineer </small></div>
+              <img src="https://i.ibb.co/xSrm394P/Screenshot-2025-12-06-032707.png" alt="Janhavi" style="width:70px!important;height:80px!important;object-fit:cover!important;border-radius:14px!important;border:2px solid rgba(255,107,53,0.3)!important;">
+            </div>
+          </div>
+          <div class="testimonial-slide" data-slide="3">
+            <div style="font-family:'Space Grotesk',sans-serif!important;font-size:clamp(36px,6vw,46px)!important;font-weight:700!important;color:#ff6b35!important;">95% Hike</div>
+            <div style="color:#888!important;font-size:12px!important;margin-bottom:16px!important;">Career transformation</div>
+            <p style="color:#ccc!important;font-size:14px!important;line-height:1.6!important;margin:0 0 22px 0!important;">I am Aman GOT multiple offers with 95% hike in TCS And ACCENTURE. Live sessions are always conducted on time.</p>
+            <div style="display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;">
+              <div><strong style="color:#fff!important;font-size:15px!important;display:block!important;">Aman Makrani</strong></div>
+              <img src="/s/pages/assets/images/ynk5mscreenshot20251206032605.png" alt="Vikram" style="width:70px!important;height:80px!important;object-fit:cover!important;border-radius:14px!important;border:2px solid rgba(255,107,53,0.3)!important;" data-filename="Screenshot 2025-12-06 032605.png">
+            </div>
+          </div>
+        </div>
+        <div style="position:absolute!important;bottom:24px!important;left:28px!important;display:flex!important;gap:12px!important;">
+          <button class="nav-btn" onclick="prevSlide()">‹</button>
+          <button class="nav-btn" onclick="nextSlide()">›</button>
+        </div>
+      </div>
+      
+      <!-- Card 2: NETWORK STYLE AVATARS -->
+      <div class="bento-card" style="background:linear-gradient(180deg,rgba(255,255,255,0.02) 0%,rgba(255,107,53,0.03) 100%)!important;border:1px solid rgba(255,107,53,0.15)!important;border-radius:20px!important;padding:28px!important;position:relative!important;min-height:300px!important;overflow:hidden!important;">
+        <div style="position:absolute!important;top:50%!important;left:50%!important;transform:translate(-50%,-50%)!important;width:180px!important;height:180px!important;border:2px dashed rgba(255,107,53,0.2)!important;border-radius:50%!important;animation:pulse 3s ease-in-out infinite!important;"></div>
+        <div style="position:absolute!important;top:50%!important;left:50%!important;transform:translate(-50%,-50%)!important;width:120px!important;height:120px!important;border:1px dashed rgba(255,107,53,0.15)!important;border-radius:50%!important;"></div>
+        <img class="network-avatar av1" src="https://randomuser.me/api/portraits/women/1.jpg" style="width:55px!important;height:55px!important;top:5%!important;left:5%!important;">
+        <img class="network-avatar av2" src="https://randomuser.me/api/portraits/men/2.jpg" style="width:45px!important;height:45px!important;top:8%!important;left:40%!important;">
+        <img class="network-avatar av3" src="https://randomuser.me/api/portraits/women/3.jpg" style="width:50px!important;height:50px!important;top:2%!important;right:15%!important;">
+        <img class="network-avatar av4" src="https://randomuser.me/api/portraits/men/4.jpg" style="width:42px!important;height:42px!important;top:25%!important;right:5%!important;">
+        <img class="network-avatar av5" src="https://randomuser.me/api/portraits/women/5.jpg" style="width:48px!important;height:48px!important;top:35%!important;left:2%!important;">
+        <img class="network-avatar av1" src="https://randomuser.me/api/portraits/men/6.jpg" style="width:44px!important;height:44px!important;bottom:30%!important;right:8%!important;">
+        <img class="network-avatar av3" src="https://randomuser.me/api/portraits/women/7.jpg" style="width:52px!important;height:52px!important;bottom:15%!important;left:8%!important;">
+        <img class="network-avatar av4" src="https://randomuser.me/api/portraits/men/8.jpg" style="width:40px!important;height:40px!important;bottom:5%!important;left:35%!important;">
+        <img class="network-avatar av2" src="https://randomuser.me/api/portraits/women/9.jpg" style="width:46px!important;height:46px!important;bottom:8%!important;right:20%!important;">
+        <img class="network-avatar av5" src="https://randomuser.me/api/portraits/men/10.jpg" style="width:50px!important;height:50px!important;bottom:25%!important;right:35%!important;">
+        <div style="position:absolute!important;top:50%!important;left:50%!important;transform:translate(-50%,-50%)!important;text-align:center!important;z-index:5!important;">
+          <div id="bigStudentCount" style="font-family:'Space Grotesk',sans-serif!important;font-size:clamp(36px,7vw,46px)!important;font-weight:700!important;color:#ff6b35!important;">10,000+</div>
+          <div style="color:#888!important;font-size:14px!important;">Happy Students</div>
+        </div>
+      </div>
+      
+      <!-- Card 3: ROTATING QUOTES -->
+      <div class="bento-card" style="background:linear-gradient(135deg,#ff6b35,#e85a2a)!important;border-radius:20px!important;position:relative!important;min-height:240px!important;overflow:hidden!important;">
+        <div class="quote-slide" data-quote="0">
+          <div style="font-size:40px!important;color:rgba(255,255,255,0.3)!important;line-height:1!important;margin-bottom:12px!important;">❝</div>
+          <p style="color:#fff!important;font-size:clamp(17px,4vw,22px)!important;font-weight:600!important;line-height:1.5!important;margin:0 0 16px 0!important;">More helpful than I could have imagined.</p>
+          <div style="color:rgba(255,255,255,0.8)!important;font-size:14px!important;">— Priya Sharma</div>
+        </div>
+        <div class="quote-slide active" data-quote="1">
+          <div style="font-size:40px!important;color:rgba(255,255,255,0.3)!important;line-height:1!important;margin-bottom:12px!important;">❝</div>
+          <p style="color:#fff!important;font-size:clamp(17px,4vw,22px)!important;font-weight:600!important;line-height:1.5!important;margin:0 0 16px 0!important;">Best investment I made for my career!</p>
+          <div style="color:rgba(255,255,255,0.8)!important;font-size:14px!important;">— Rohit Verma</div>
+        </div>
+        <div class="quote-slide" data-quote="2">
+          <div style="font-size:40px!important;color:rgba(255,255,255,0.3)!important;line-height:1!important;margin-bottom:12px!important;">❝</div>
+          <p style="color:#fff!important;font-size:clamp(17px,4vw,22px)!important;font-weight:600!important;line-height:1.5!important;margin:0 0 16px 0!important;">Vikas sir explains complex topics so simply.</p>
+          <div style="color:rgba(255,255,255,0.8)!important;font-size:14px!important;">— Anita Desai</div>
+        </div>
+        <div class="quote-slide" data-quote="3">
+          <div style="font-size:40px!important;color:rgba(255,255,255,0.3)!important;line-height:1!important;margin-bottom:12px!important;">❝</div>
+          <p style="color:#fff!important;font-size:clamp(17px,4vw,22px)!important;font-weight:600!important;line-height:1.5!important;margin:0 0 16px 0!important;">Got 3 offers after completing this course!</p>
+          <div style="color:rgba(255,255,255,0.8)!important;font-size:14px!important;">— Karan Mehta</div>
+        </div>
+      </div>
+      
+      <!-- Card 4: ROTATING PHOTOS -->
+      <div class="bento-card" style="background:rgba(255,255,255,0.03)!important;border:1px solid rgba(255,107,53,0.15)!important;border-radius:20px!important;position:relative!important;min-height:240px!important;overflow:hidden!important;">
+        <img class="stats-img" id="statsImg1" src="https://wsrv.nl/?url=https://i.ibb.co/m504M4B9/IMG-20250315-175642.jpg&amp;w=400&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Success 1" loading="eager">
+        <img class="stats-img active" id="statsImg2" src="https://wsrv.nl/?url=https://i.ibb.co/GfBSwnnv/IMG-20250405-203213-Copy.jpg&amp;w=400&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Success 2" loading="eager">
+        <img class="stats-img" id="statsImg3" src="https://wsrv.nl/?url=https://i.ibb.co/xKc7RC82/IMG-20250405-203901.jpg&amp;w=400&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Success 3" loading="eager">
+        <img class="stats-img" id="statsImg4" src="https://wsrv.nl/?url=https://i.ibb.co/VsPypNT/Trendy-Feminine-Photo-Frame-Facebook-Cover.png&amp;w=400&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Success 4" loading="eager">
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div style="color: rgb(255, 255, 255) !important; background: linear-gradient(135deg, rgb(232, 90, 42), rgb(255, 107, 53), rgb(255, 159, 28)) !important; padding: 60px 25px !important; text-align: center !important;">
+  <h2 style="font-family:'Space Grotesk',sans-serif!important;font-size:clamp(26px,5vw,38px)!important;color:#fff!important;margin:0 0 16px 0!important;">Ready for High-Package Journey?</h2>
+  <p style="color:rgba(255,255,255,0.9)!important;font-size:17px!important;margin:0 0 30px 0!important;">Join 10,000+ students. Dream job is 55 days away!</p>
+  <div style="display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:14px!important;">
+    <a href="https://www.clouddevopshub.com/courses/batch-42-69328e01f32f9450e82123f3" style="background:#fff!important;color:#ff6b35!important;padding:15px 32px!important;border-radius:50px!important;text-decoration:none!important;font-weight:700!important;font-size:16px!important;">🎓 Enroll Now</a>
+    <a href="https://chat.whatsapp.com/HtdFsTVrYYwLe5uGUWcCqA" style="background:transparent!important;color:#fff!important;padding:15px 32px!important;border-radius:50px!important;text-decoration:none!important;font-weight:700!important;font-size:16px!important;border:2px solid #fff!important;">💬 WhatsApp</a>
+  </div>
+</div>
+
+</div><script>
+// Countdown
+function updateCountdown(){var t=new Date('December 18, 2025 08:00:00').getTime(),n=new Date().getTime(),d=t-n;if(d<0)return;document.getElementById('days').textContent=Math.floor(d/86400000).toString().padStart(2,'0');document.getElementById('hours').textContent=Math.floor((d%86400000)/3600000).toString().padStart(2,'0');document.getElementById('minutes').textContent=Math.floor((d%3600000)/60000).toString().padStart(2,'0');document.getElementById('seconds').textContent=Math.floor((d%60000)/1000).toString().padStart(2,'0')}updateCountdown();setInterval(updateCountdown,1000);
+
+// Hero Image Rotation
+var currentImg=0,images=[document.getElementById('heroImg1'),document.getElementById('heroImg2')];function rotateImages(){images[currentImg].style.opacity='0';currentImg=(currentImg+1)%2;images[currentImg].style.opacity='1'}setInterval(rotateImages,2000);
+
+// Hero Stats
+function animateCount(el,start,end,suffix,duration,decimal){let startTime=null;const step=(timestamp)=>{if(!startTime)startTime=timestamp;const progress=Math.min((timestamp-startTime)/duration,1);const current=decimal?((progress*(end-start)+start).toFixed(1)):(Math.floor(progress*(end-start)+start));if(current>=1000){el.textContent=Math.floor(current/1000).toLocaleString()+","+(current%1000).toString().padStart(3,"0").slice(0,-2)+"00+"}else{el.textContent=current+suffix}if(progress<1)requestAnimationFrame(step)};requestAnimationFrame(step)}
+setTimeout(()=>{animateCount(document.getElementById("countStudents"),0,10000,"+",2000,false);animateCount(document.getElementById("countPlaced"),0,97,"%",2000,false);animateCount(document.getElementById("countRating"),0,4.9,"/5",2000,true)},500);
+
+// Big Count Animation
+function animateBigCount(){var el=document.getElementById('bigStudentCount');var start=0;var end=10000;var duration=2500;var startTime=null;function step(timestamp){if(!startTime)startTime=timestamp;var progress=Math.min((timestamp-startTime)/duration,1);var easeOut=1-Math.pow(1-progress,3);var current=Math.floor(easeOut*(end-start)+start);if(current>=1000){el.textContent=Math.floor(current/1000).toLocaleString()+','+(current%1000).toString().padStart(3,'0')+'+'}else{el.textContent=current+'+'}if(progress<1){requestAnimationFrame(step)}else{el.textContent='10,000+'}}requestAnimationFrame(step)}
+
+function animatePlacement(){var el=document.getElementById('placementRate');if(!el)return;var start=0;var end=97;var duration=2000;var startTime=null;function step(timestamp){if(!startTime)startTime=timestamp;var progress=Math.min((timestamp-startTime)/duration,1);var easeOut=1-Math.pow(1-progress,3);var current=Math.floor(easeOut*(end-start)+start);el.textContent=current+'%';if(progress<1)requestAnimationFrame(step)}requestAnimationFrame(step)}
+
+var testimonialSection=document.querySelector('#bigStudentCount');var hasAnimated=false;function checkVisibility(){var rect=testimonialSection.getBoundingClientRect();var isVisible=rect.top<window.innerHeight&&rect.bottom>0;if(isVisible&&!hasAnimated){hasAnimated=true;animateBigCount()}}
+window.addEventListener('scroll',checkVisibility);window.addEventListener('load',function(){setTimeout(checkVisibility,100)});
+
+// Testimonial Slider
+var currentSlide=0;var totalSlides=4;var slides=document.querySelectorAll('.testimonial-slide');var autoSlideInterval;
+function showSlide(index){slides.forEach(function(slide,i){slide.classList.remove('active');if(i===index){slide.classList.add('active')}})}
+function nextSlide(){currentSlide=(currentSlide+1)%totalSlides;showSlide(currentSlide);resetAutoSlide()}
+function prevSlide(){currentSlide=(currentSlide-1+totalSlides)%totalSlides;showSlide(currentSlide);resetAutoSlide()}
+function resetAutoSlide(){clearInterval(autoSlideInterval);autoSlideInterval=setInterval(nextSlide,4000)}
+autoSlideInterval=setInterval(nextSlide,4000);
+
+// Quote Slider
+var currentQuote=0;var totalQuotes=4;var quoteSlides=document.querySelectorAll('.quote-slide');
+function showQuote(index){quoteSlides.forEach(function(slide,i){slide.classList.remove('active');if(i===index){slide.classList.add('active')}})}
+function nextQuote(){currentQuote=(currentQuote+1)%totalQuotes;showQuote(currentQuote)}
+setInterval(nextQuote,3000);
+
+// STATS PHOTOS SLIDER - 4 rotating images
+var currentStatsImg = 0;
+var totalStatsImgs = 4;
+var statsImgs = [
+  document.getElementById('statsImg1'),
+  document.getElementById('statsImg2'),
+  document.getElementById('statsImg3'),
+  document.getElementById('statsImg4')
+];
+
+function rotateStatsImgs() {
+  statsImgs[currentStatsImg].classList.remove('active');
+  currentStatsImg = (currentStatsImg + 1) % totalStatsImgs;
+  statsImgs[currentStatsImg].classList.add('active');
+}
+
+// Rotate every 3 seconds
+setInterval(rotateStatsImgs, 3000);
+</script>
