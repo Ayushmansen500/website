@@ -1,0 +1,3088 @@
+<!---OTHERS--->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Pacifico&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"><style>
+/* ══════════════════════════════════════════════════════════════════════════
+   🎨 COLORS - YAHAN SE COLORS CHANGE KARO
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* 
+   PRIMARY COLOR (Orange): #FF6B00
+   SECONDARY COLOR (Purple): #8B5CF6
+   BACKGROUND: #0A0A0F
+   TEXT: #FFFFFF
+   
+   Agar colors change karne hai toh Ctrl+H (Find & Replace) use karo:
+   - #FF6B00 ko apne color se replace karo (Primary Orange)
+   - #0A0A0F ko apne color se replace karo (Background)
+*/
+
+/* ══════════════════════════════════════════════════════════════════════════
+   AI ROBOT - WALKS ON BUTTON LEFT RIGHT
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-btn-robot-wrap {
+    position: relative !important;
+    display: inline-block !important;
+    overflow: visible !important;
+}
+
+.cdh-robot {
+    position: absolute !important;
+    top: -55px !important;
+    width: 40px !important;
+    height: 55px !important;
+    z-index: 100 !important;
+    pointer-events: none !important;
+    animation: robotMove 5s linear infinite !important;
+}
+
+@keyframes robotMove {
+    0% { 
+        left: 0px;
+        transform: scaleX(1);
+    }
+    45% { 
+        left: 200px;
+        transform: scaleX(1);
+    }
+    50% { 
+        left: 200px;
+        transform: scaleX(-1);
+    }
+    95% { 
+        left: 0px;
+        transform: scaleX(-1);
+    }
+    100% { 
+        left: 0px;
+        transform: scaleX(1);
+    }
+}
+
+/* Robot Head */
+.cdh-robot-head {
+    position: absolute !important;
+    width: 30px !important;
+    height: 22px !important;
+    background: linear-gradient(180deg, #5DADE2 0%, #2E86C1 100%) !important;
+    border-radius: 8px 8px 4px 4px !important;
+    left: 5px !important;
+    top: 5px !important;
+    border: 2px solid #1B4F72 !important;
+}
+
+/* Robot Eyes */
+.cdh-robot-eye {
+    position: absolute !important;
+    width: 7px !important;
+    height: 7px !important;
+    background: #00FF00 !important;
+    border-radius: 50% !important;
+    top: 7px !important;
+    box-shadow: 0 0 6px #00FF00, 0 0 12px #00FF00 !important;
+    animation: blink 2s infinite !important;
+}
+
+.cdh-robot-eye.left { left: 5px !important; }
+.cdh-robot-eye.right { right: 5px !important; }
+
+@keyframes blink {
+    0%, 85%, 100% { transform: scaleY(1); }
+    90% { transform: scaleY(0.1); }
+}
+
+/* Antenna */
+.cdh-robot-antenna {
+    position: absolute !important;
+    width: 3px !important;
+    height: 8px !important;
+    background: #666 !important;
+    left: 18px !important;
+    top: -2px !important;
+}
+
+.cdh-robot-antenna::after {
+    content: '' !important;
+    position: absolute !important;
+    width: 8px !important;
+    height: 8px !important;
+    background: #FF6B00 !important;
+    border-radius: 50% !important;
+    top: -7px !important;
+    left: -2.5px !important;
+    box-shadow: 0 0 8px #FF6B00 !important;
+    animation: glow 0.8s infinite alternate !important;
+}
+
+@keyframes glow {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; box-shadow: 0 0 12px #FF6B00, 0 0 20px #FFD700; }
+}
+
+/* Robot Body */
+.cdh-robot-body {
+    position: absolute !important;
+    width: 24px !important;
+    height: 16px !important;
+    background: linear-gradient(180deg, #666 0%, #444 100%) !important;
+    border-radius: 3px !important;
+    left: 8px !important;
+    top: 26px !important;
+    border: 1px solid #333 !important;
+}
+
+.cdh-robot-body::before {
+    content: '' !important;
+    position: absolute !important;
+    width: 8px !important;
+    height: 4px !important;
+    background: #FF6B00 !important;
+    border-radius: 1px !important;
+    left: 8px !important;
+    top: 6px !important;
+    animation: glow 0.8s infinite alternate !important;
+}
+
+/* Robot Legs */
+.cdh-robot-leg {
+    position: absolute !important;
+    width: 6px !important;
+    height: 14px !important;
+    background: #555 !important;
+    top: 40px !important;
+    border-radius: 0 0 2px 2px !important;
+    transform-origin: top center !important;
+}
+
+.cdh-robot-leg.left {
+    left: 11px !important;
+    animation: walkL 0.3s ease-in-out infinite !important;
+}
+
+.cdh-robot-leg.right {
+    right: 11px !important;
+    animation: walkR 0.3s ease-in-out infinite !important;
+}
+
+@keyframes walkL {
+    0%, 100% { transform: rotate(-15deg); }
+    50% { transform: rotate(15deg); }
+}
+
+@keyframes walkR {
+    0%, 100% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
+}
+
+/* Robot Arms */
+.cdh-robot-arm {
+    position: absolute !important;
+    width: 4px !important;
+    height: 10px !important;
+    background: #555 !important;
+    top: 27px !important;
+    border-radius: 2px !important;
+    transform-origin: top center !important;
+}
+
+.cdh-robot-arm.left {
+    left: 4px !important;
+    animation: armL 0.3s ease-in-out infinite !important;
+}
+
+.cdh-robot-arm.right {
+    right: 4px !important;
+    animation: armR 0.3s ease-in-out infinite !important;
+}
+
+@keyframes armL {
+    0%, 100% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
+}
+
+@keyframes armR {
+    0%, 100% { transform: rotate(-15deg); }
+    50% { transform: rotate(15deg); }
+}
+
+/* Hover - wave */
+.cdh-btn-robot-wrap:hover .cdh-robot {
+    animation-play-state: paused !important;
+}
+
+.cdh-btn-robot-wrap:hover .cdh-robot-leg {
+    animation-play-state: paused !important;
+    transform: rotate(0deg) !important;
+}
+
+.cdh-btn-robot-wrap:hover .cdh-robot-arm.left {
+    animation-play-state: paused !important;
+}
+
+.cdh-btn-robot-wrap:hover .cdh-robot-arm.right {
+    animation: wave 0.4s ease-in-out infinite !important;
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(-60deg); }
+    50% { transform: rotate(-120deg); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   UPCOMING BATCH SECTION - MOBILE RESPONSIVE
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-upcoming-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1.2fr !important;
+    gap: 50px !important;
+    align-items: center !important;
+    visibility: visible !important;
+}
+
+.cdh-upcoming-image {
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+.cdh-upcoming-content {
+    display: block !important;
+    visibility: visible !important;
+}
+
+@media (max-width: 1024px) {
+    .cdh-upcoming-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    
+    .cdh-upcoming-image {
+        max-width: 400px !important;
+        margin: 0 auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .cdh-upcoming-grid {
+        gap: 30px !important;
+    }
+    
+    .cdh-upcoming-image {
+        max-width: 320px !important;
+    }
+    
+    .cdh-upcoming-content {
+        text-align: left !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .cdh-upcoming-image {
+        max-width: 280px !important;
+    }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   COURSE REVIEWS SECTION (WHITE CARDS)
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-reviews {
+    background: #0A0A0F !important;
+    padding: 80px 0 !important;
+}
+
+.cdh-reviews-title {
+    font-family: 'Pacifico', cursive !important;
+    font-size: clamp(36px, 5vw, 56px) !important;
+    font-weight: 400 !important;
+    color: #6B8DD6 !important;
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+}
+
+.cdh-reviews-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+    visibility: visible !important;
+}
+
+.cdh-review-card {
+    background: #FFFFFF !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    transition: all 0.3s ease !important;
+}
+
+.cdh-review-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3) !important;
+}
+
+.cdh-review-stars {
+    display: flex !important;
+    gap: 3px !important;
+    margin-bottom: 14px !important;
+}
+
+.cdh-review-stars i {
+    color: #F59E0B !important;
+    font-size: 14px !important;
+}
+
+.cdh-review-text {
+    color: #1F2937 !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+    font-weight: 400 !important;
+}
+
+.cdh-review-author {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+.cdh-review-avatar {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+    background: #E5E7EB !important;
+}
+
+.cdh-review-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.cdh-review-info h4 {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #1F2937 !important;
+    margin: 0 0 2px 0 !important;
+}
+
+.cdh-review-info p {
+    font-size: 13px !important;
+    color: #6B7280 !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 1024px) {
+    .cdh-reviews-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .cdh-reviews {
+        padding: 60px 0 !important;
+    }
+    
+    .cdh-reviews-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+    
+    .cdh-review-card {
+        padding: 20px !important;
+    }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   WHATSAPP COMMUNITY SECTION (DISCORD STYLE)
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-whatsapp-community {
+    background: linear-gradient(180deg, #0D1117 0%, #161B22 100%) !important;
+    padding: 100px 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    overflow: hidden !important;
+}
+
+.cdh-whatsapp-header {
+    text-align: center !important;
+    margin-bottom: 60px !important;
+}
+
+.cdh-whatsapp-header .cdh-caption {
+    color: #58A6FF !important;
+}
+
+.cdh-whatsapp-title {
+    font-family: 'Pacifico', cursive !important;
+    font-size: clamp(32px, 5vw, 56px) !important;
+    font-weight: 400 !important;
+    color: #FFFFFF !important;
+    margin-top: 16px !important;
+}
+
+.cdh-whatsapp-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1.5fr !important;
+    gap: 60px !important;
+    align-items: center !important;
+    visibility: visible !important;
+}
+
+.cdh-whatsapp-content {
+    padding-right: 20px !important;
+}
+
+.cdh-whatsapp-content h3 {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: clamp(24px, 3vw, 32px) !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    margin-bottom: 20px !important;
+}
+
+.cdh-whatsapp-content p {
+    color: rgba(255,255,255,0.75) !important;
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    margin-bottom: 30px !important;
+}
+
+.cdh-whatsapp-content p strong {
+    color: #FFFFFF !important;
+}
+
+.cdh-whatsapp-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    background: #25D366 !important;
+    color: #FFFFFF !important;
+    padding: 16px 32px !important;
+    border-radius: 30px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.cdh-whatsapp-btn:hover {
+    background: #128C7E !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 30px rgba(37,211,102,0.4) !important;
+    color: #FFFFFF !important;
+}
+
+.cdh-whatsapp-btn i {
+    font-size: 20px !important;
+}
+
+/* WhatsApp Images Collage */
+.cdh-whatsapp-images {
+    position: relative !important;
+    height: 500px !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-whatsapp-img {
+    position: absolute !important;
+    border-radius: 12px !important;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    overflow: hidden !important;
+    transition: all 0.4s ease !important;
+}
+
+.cdh-whatsapp-img:hover {
+    transform: scale(1.05) !important;
+    z-index: 10 !important;
+    box-shadow: 0 30px 60px rgba(37,211,102,0.3) !important;
+}
+
+.cdh-whatsapp-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.cdh-whatsapp-img-1 {
+    width: 320px !important;
+    height: 240px !important;
+    top: 0 !important;
+    right: 50px !important;
+    z-index: 3 !important;
+}
+
+.cdh-whatsapp-img-2 {
+    width: 280px !important;
+    height: 350px !important;
+    top: 80px !important;
+    left: 0 !important;
+    z-index: 2 !important;
+}
+
+.cdh-whatsapp-img-3 {
+    width: 240px !important;
+    height: 180px !important;
+    bottom: 20px !important;
+    left: 100px !important;
+    z-index: 4 !important;
+}
+
+.cdh-whatsapp-img-4 {
+    width: 200px !important;
+    height: 280px !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    z-index: 1 !important;
+}
+
+/* WhatsApp Floating Tags */
+.cdh-whatsapp-tag {
+    position: absolute !important;
+    background: #2F3136 !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #8E9297 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4) !important;
+    z-index: 5 !important;
+    white-space: nowrap !important;
+}
+
+.cdh-whatsapp-tag::before {
+    content: '#' !important;
+    color: #72767D !important;
+    margin-right: 6px !important;
+}
+
+.cdh-tag-1 {
+    top: 200px !important;
+    left: 180px !important;
+}
+
+.cdh-tag-2 {
+    bottom: 150px !important;
+    right: 180px !important;
+}
+
+@media (max-width: 1024px) {
+    .cdh-whatsapp-grid {
+        grid-template-columns: 1fr !important;
+        gap: 50px !important;
+    }
+    
+    .cdh-whatsapp-content {
+        text-align: center !important;
+        padding-right: 0 !important;
+    }
+    
+    .cdh-whatsapp-images {
+        height: 400px !important;
+        max-width: 600px !important;
+        margin: 0 auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .cdh-whatsapp-community {
+        padding: 70px 0 !important;
+    }
+    
+    .cdh-whatsapp-images {
+        height: 350px !important;
+    }
+    
+    .cdh-whatsapp-img-1 {
+        width: 200px !important;
+        height: 150px !important;
+        right: 20px !important;
+    }
+    
+    .cdh-whatsapp-img-2 {
+        width: 180px !important;
+        height: 220px !important;
+    }
+    
+    .cdh-whatsapp-img-3 {
+        width: 160px !important;
+        height: 120px !important;
+        left: 60px !important;
+    }
+    
+    .cdh-whatsapp-img-4 {
+        width: 140px !important;
+        height: 180px !important;
+    }
+    
+    .cdh-whatsapp-tag {
+        display: none !important;
+    }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   GRAPHY COMPATIBLE - NO CSS VARIABLES, NO BACKDROP-FILTER
+   ADDED !important FOR GRAPHY OVERRIDE PROTECTION
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-page,
+.cdh-page * {
+    box-sizing: border-box !important;
+}
+
+.cdh-page {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #FFFFFF !important;
+    background: #0A0A0F !important;
+    overflow-x: hidden !important;
+    -webkit-font-smoothing: antialiased !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.cdh-page img { max-width: 100% !important; height: auto !important; }
+.cdh-page a { text-decoration: none !important; color: inherit; transition: all 0.3s ease; }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   TYPOGRAPHY
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-display {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.cdh-h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.cdh-h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.cdh-h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Gradient Text */
+.cdh-gradient-text {
+    background: linear-gradient(135deg, #FF6B00 0%, #FF8534 50%, #FFAB00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   LAYOUT - GRAPHY VISIBILITY FIX
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-section {
+    padding: 80px 0 !important;
+    position: relative !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.cdh-section-sm { padding: 50px 0 !important; }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   BUTTONS
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cdh-btn-primary {
+    background: linear-gradient(135deg, #FF6B00 0%, #FF8534 50%, #FFAB00 100%);
+    color: #000;
+    box-shadow: 0 4px 20px rgba(255,107,0,0.4);
+}
+
+.cdh-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(255,107,0,0.5);
+    color: #000;
+}
+
+.cdh-btn-secondary {
+    background: rgba(255,255,255,0.08);
+    color: #FFFFFF;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.cdh-btn-secondary:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: #FF6B00;
+    transform: translateY(-2px);
+    color: #FFFFFF;
+}
+
+.cdh-btn-lg {
+    padding: 18px 36px;
+    font-size: 16px;
+}
+
+.cdh-btn-sm {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CARDS - GRAPHY VISIBILITY FIX
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    border-radius: 20px !important;
+    padding: 28px !important;
+    transition: all 0.3s ease;
+    position: relative !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,107,0,0.3);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   BADGES
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cdh-badge-primary {
+    background: rgba(255,107,0,0.15);
+    color: #FF6B00;
+    border: 1px solid rgba(255,107,0,0.3);
+}
+
+.cdh-badge-live {
+    background: rgba(239,68,68,0.15);
+    color: #EF4444;
+    border: 1px solid rgba(239,68,68,0.3);
+}
+
+.cdh-badge-live::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #EF4444;
+    border-radius: 50%;
+    animation: cdh-pulse 1.5s ease infinite;
+}
+
+@keyframes cdh-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   ANNOUNCEMENT BAR - GRAPHY VISIBILITY FIX
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-announce {
+    background: linear-gradient(135deg, #FF6B00 0%, #FF8534 50%, #FFAB00 100%) !important;
+    padding: 14px 20px !important;
+    text-align: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-announce-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.cdh-announce-text {
+    color: #000;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.cdh-announce-btn {
+    background: #000;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.cdh-announce-btn:hover {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   HERO SECTION - TWO COLUMN LAYOUT
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-hero {
+    min-height: 90vh !important;
+    display: flex !important;
+    align-items: center !important;
+    position: relative !important;
+    padding: 60px 0 !important;
+    background: radial-gradient(ellipse at 30% 30%, rgba(255,107,0,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 70%, rgba(124,58,237,0.06) 0%, transparent 50%),
+                #0A0A0F !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+}
+
+.cdh-hero-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 40px !important;
+    align-items: center !important;
+    visibility: visible !important;
+}
+
+.cdh-hero-content {
+    position: relative !important;
+    z-index: 1 !important;
+    text-align: left !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-hero-batch {
+    margin-bottom: 24px;
+}
+
+.cdh-hero-title {
+    margin-bottom: 20px;
+}
+
+.cdh-hero-subtitle {
+    font-size: 18px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 32px;
+    line-height: 1.7;
+}
+
+.cdh-hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+}
+
+.cdh-hero-stats {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.cdh-hero-stat {
+    text-align: center;
+}
+
+.cdh-hero-stat-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FF6B00;
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.cdh-hero-stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   NEW HERO RIGHT SIDE - CIRCULAR PHOTO WITH FLOATING BADGES
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-hero-image {
+    position: relative !important;
+    width: 100% !important;
+    min-height: 550px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    visibility: visible !important;
+}
+
+/* Background Glow */
+.cdh-bg-glow {
+    position: absolute !important;
+    width: 450px !important;
+    height: 450px !important;
+    background: radial-gradient(circle, rgba(255,107,0,0.12) 0%, rgba(139,92,246,0.08) 40%, transparent 70%) !important;
+    filter: blur(50px) !important;
+    z-index: 0 !important;
+    border-radius: 50% !important;
+}
+
+/* Circular Photo Frame - BIGGER SIZE */
+.cdh-photo-frame {
+    position: relative !important;
+    width: 400px !important;
+    height: 400px !important;
+    z-index: 5 !important;
+}
+
+/* Gradient Ring Border */
+.cdh-photo-ring {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    padding: 5px !important;
+    background: linear-gradient(135deg, #FF6B00 0%, #FF8534 25%, #FFFFFF 50%, #FF6B00 75%, #E53935 100%) !important;
+}
+
+.cdh-photo-inner {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    background: #0A0A0F !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+.cdh-photo-inner img {
+    width: 96% !important;
+    height: 96% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+    border-radius: 50% !important;
+}
+
+/* White Arc Decoration */
+.cdh-arc-white {
+    position: absolute !important;
+    width: 440px !important;
+    height: 440px !important;
+    border: 2px solid rgba(255,255,255,0.2) !important;
+    border-radius: 50% !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%) !important;
+    z-index: 4 !important;
+}
+
+/* Social Media Icons - Different Positions */
+.cdh-social-icon {
+    position: absolute !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    z-index: 10 !important;
+}
+
+.cdh-social-icon i {
+    font-size: 24px !important;
+    color: #FFF !important;
+}
+
+.cdh-social-icon:hover {
+    transform: scale(1.15) !important;
+}
+
+/* YouTube - Top Left */
+.cdh-social-icon.youtube {
+    top: 30px !important;
+    left: 30px !important;
+    background: linear-gradient(135deg, #FF0000, #CC0000) !important;
+    box-shadow: 0 8px 25px rgba(255,0,0,0.4) !important;
+}
+
+.cdh-social-icon.youtube:hover {
+    box-shadow: 0 12px 35px rgba(255,0,0,0.5) !important;
+}
+
+/* Instagram - Bottom Left */
+.cdh-social-icon.instagram {
+    bottom: 80px !important;
+    left: 20px !important;
+    background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCAF45) !important;
+    box-shadow: 0 8px 25px rgba(131,58,180,0.4) !important;
+}
+
+.cdh-social-icon.instagram:hover {
+    box-shadow: 0 12px 35px rgba(131,58,180,0.5) !important;
+}
+
+/* Facebook - Bottom Right */
+.cdh-social-icon.facebook {
+    bottom: 50px !important;
+    right: 30px !important;
+    background: linear-gradient(135deg, #1877F2, #0D65D9) !important;
+    box-shadow: 0 8px 25px rgba(24,119,242,0.4) !important;
+}
+
+.cdh-social-icon.facebook:hover {
+    box-shadow: 0 12px 35px rgba(24,119,242,0.5) !important;
+}
+
+/* Old play button styles removed */
+
+/* Floating Badge Cards */
+.cdh-badge-card {
+    position: absolute !important;
+    background: rgba(20,20,30,0.95) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    border-radius: 12px !important;
+    padding: 10px 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    z-index: 10 !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4) !important;
+    animation: floatBadge 4s ease-in-out infinite !important;
+}
+
+@keyframes floatBadge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.cdh-badge-icon {
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 16px !important;
+    flex-shrink: 0 !important;
+}
+
+.cdh-badge-text {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #FFFFFF !important;
+    white-space: nowrap !important;
+}
+
+/* Badge Positions - Closer to photo */
+.cdh-badge-1 { top: 20px !important; right: 10px !important; animation-delay: 0s !important; }
+.cdh-badge-2 { top: 100px !important; left: -20px !important; animation-delay: 0.5s !important; }
+.cdh-badge-3 { top: 220px !important; right: -10px !important; animation-delay: 1s !important; }
+.cdh-badge-4 { bottom: 120px !important; left: -10px !important; animation-delay: 1.5s !important; }
+.cdh-badge-5 { bottom: 50px !important; right: 20px !important; animation-delay: 2s !important; }
+
+/* Badge Icon Colors */
+.cdh-badge-icon.orange { background: linear-gradient(135deg, #FF6B00, #FF8534) !important; color: #000 !important; }
+.cdh-badge-icon.green { background: linear-gradient(135deg, #10B981, #34D399) !important; color: #000 !important; }
+.cdh-badge-icon.blue { background: linear-gradient(135deg, #3B82F6, #60A5FA) !important; color: #FFF !important; }
+.cdh-badge-icon.purple { background: linear-gradient(135deg, #8B5CF6, #A78BFA) !important; color: #FFF !important; }
+.cdh-badge-icon.red { background: linear-gradient(135deg, #EF4444, #F87171) !important; color: #FFF !important; }
+
+/* Avatar Stack */
+.cdh-avatar-stack {
+    display: flex !important;
+    margin-right: 5px !important;
+}
+
+.cdh-avatar-stack span {
+    width: 26px !important;
+    height: 26px !important;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, #FF6B00, #FFD700) !important;
+    border: 2px solid #14141E !important;
+    margin-left: -8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    color: #000 !important;
+}
+
+.cdh-avatar-stack span:first-child { margin-left: 0 !important; }
+
+/* Decorative Elements - Subtle */
+.cdh-x-mark {
+    position: absolute !important;
+    font-size: 12px !important;
+    font-weight: 300 !important;
+    color: #FF6B00 !important;
+    opacity: 0.4 !important;
+    z-index: 3 !important;
+}
+
+.cdh-x-mark.x1 { top: 60px; left: 40px; }
+.cdh-x-mark.x2 { top: 150px; right: 50px; animation: pulse 2s infinite; }
+.cdh-x-mark.x3 { bottom: 140px; right: 5px; color: #FFF; }
+.cdh-x-mark.x4 { bottom: 70px; left: 80px; }
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+.cdh-dot {
+    position: absolute !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    z-index: 3 !important;
+}
+
+.cdh-dot.orange { background: #FF6B00 !important; }
+.cdh-dot.white { background: rgba(255,255,255,0.5) !important; }
+
+.cdh-dot.d1 { top: 40px; right: 90px; }
+.cdh-dot.d2 { top: 180px; left: 20px; }
+.cdh-dot.d3 { bottom: 160px; right: 70px; }
+
+/* Dots Grid */
+.cdh-dots-grid {
+    position: absolute !important;
+    bottom: 20px !important;
+    right: 10px !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, 5px) !important;
+    gap: 5px !important;
+    opacity: 0.4 !important;
+    z-index: 3 !important;
+}
+
+.cdh-dots-grid span {
+    width: 5px !important;
+    height: 5px !important;
+    background: #FF6B00 !important;
+    border-radius: 50% !important;
+}
+
+/* Floating Tech Icons */
+.cdh-tech-float {
+    position: absolute !important;
+    width: 38px !important;
+    height: 38px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 20px !important;
+    z-index: 4 !important;
+    animation: techFloat 5s ease-in-out infinite !important;
+}
+
+@keyframes techFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+.cdh-tech-float.t1 { top: 10px; right: 60px; animation-delay: 0s; }
+.cdh-tech-float.t2 { bottom: 160px; right: 80px; animation-delay: 1s; }
+.cdh-tech-float.t3 { top: 130px; left: 5px; animation-delay: 2s; }
+
+/* Tech Colors */
+.cdh-c-aws { color: #FF9900 !important; }
+.cdh-c-azure { color: #0078D4 !important; }
+.cdh-c-gcp { color: #4285F4 !important; }
+.cdh-c-docker { color: #2496ED !important; }
+.cdh-c-k8s { color: #326CE5 !important; }
+.cdh-c-terraform { color: #7B42BC !important; }
+.cdh-c-jenkins { color: #D33833 !important; }
+.cdh-c-ansible { color: #EE0000 !important; }
+.cdh-c-linux { color: #000000 !important; }
+.cdh-c-python { color: #3776AB !important; }
+.cdh-c-git { color: #F05032 !important; }
+.cdh-c-prometheus { color: #E6522C !important; }
+.cdh-c-grafana { color: #F46800 !important; }
+.cdh-c-github { color: #181717 !important; }
+.cdh-c-ai { color: #10B981 !important; }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   TECH BANNER - GRAPHY VISIBILITY FIX
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-tech-banner {
+    background: linear-gradient(135deg, #FF6B00 0%, #FFAB00 100%) !important;
+    padding: 20px 0 !important;
+    overflow: hidden !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-tech-banner-track {
+    display: flex;
+    animation: cdh-scroll-banner 30s linear infinite;
+    width: max-content;
+}
+
+@keyframes cdh-scroll-banner {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.cdh-tech-banner-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 32px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    white-space: nowrap;
+}
+
+.cdh-tech-banner-item i {
+    font-size: 24px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   COMPANY LOGOS - GRAPHY VISIBILITY FIX
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-companies {
+    background: #0A0A0F !important;
+    border-top: 1px solid rgba(255,255,255,0.08) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+    overflow: hidden !important;
+    padding: 40px 0 !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-companies-title {
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 30px;
+}
+
+.cdh-companies-track {
+    display: flex;
+    animation: cdh-scroll-companies 40s linear infinite;
+    width: max-content;
+}
+
+@keyframes cdh-scroll-companies {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.cdh-company-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    height: 70px;
+    margin: 0 16px;
+    padding: 16px 24px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.cdh-company-logo:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,107,0,0.3);
+}
+
+.cdh-company-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cdh-company-name i {
+    font-size: 20px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   PROBLEM/SOLUTION - GRAPHY VISIBILITY FIX
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-problem {
+    background: linear-gradient(180deg, #0A0A0F 0%, #12121A 100%) !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-problem-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 40px !important;
+    align-items: start !important;
+    visibility: visible !important;
+}
+
+.cdh-problem-content h2 {
+    margin-bottom: 20px;
+}
+
+.cdh-problem-list {
+    list-style: none;
+}
+
+.cdh-problem-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 16px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+}
+
+.cdh-problem-list li i {
+    font-size: 18px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.cdh-problem-list li i.fa-xmark { color: #EF4444; }
+.cdh-problem-list li i.fa-check { color: #10B981; }
+
+.cdh-caption {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SECTION HEADER - GRAPHY VISIBILITY FIX
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-section-header {
+    text-align: center !important;
+    margin-bottom: 48px !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-section-header .cdh-caption {
+    color: #FF6B00 !important;
+    margin-bottom: 12px !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-section-header h2 {
+    margin-bottom: 12px !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-section-header p {
+    color: rgba(255,255,255,0.6) !important;
+    font-size: 16px !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   FEATURES - GRAPHY VISIBILITY FIX
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-features {
+    background: #0A0A0F !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-features-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 20px !important;
+    visibility: visible !important;
+}
+
+.cdh-feature-card {
+    text-align: center !important;
+    padding: 32px 24px !important;
+    background: #1A1A25 !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-feature-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #FF6B00, #FFAB00);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #000;
+    box-shadow: 0 8px 30px rgba(255,107,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.cdh-feature-card:hover .cdh-feature-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.cdh-feature-card h3 {
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.cdh-feature-card p {
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   TECH STACK GRID - GRAPHY VISIBILITY FIX
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-tech {
+    background: #12121A !important;
+    display: block !important;
+    visibility: visible !important;
+    padding: 60px 0 !important;
+}
+
+.cdh-tech-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 12px !important;
+    visibility: visible !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+}
+
+.cdh-tech-card {
+    background: #1A1A25 !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    border-radius: 10px !important;
+    padding: 16px 10px !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-tech-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,107,0,0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.cdh-tech-card i {
+    font-size: 32px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.cdh-tech-card span {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    display: block;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CURRICULUM - GRAPHY VISIBILITY FIX
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-curriculum {
+    background: #0A0A0F !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-curriculum-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 20px !important;
+    visibility: visible !important;
+}
+
+.cdh-curriculum-card {
+    background: #1A1A25 !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    transition: all 0.3s ease;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-curriculum-card:hover {
+    border-color: rgba(255,107,0,0.3);
+    transform: translateY(-3px);
+}
+
+.cdh-curriculum-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.cdh-curriculum-week {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #FF6B00, #FFAB00);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #000;
+    flex-shrink: 0;
+}
+
+.cdh-curriculum-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.cdh-curriculum-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.cdh-curriculum-topic {
+    padding: 6px 12px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   URGENCY SECTION - GRAPHY VISIBILITY FIX
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-urgency {
+    background: linear-gradient(135deg, #1a0a00 0%, #0A0A0F 100%) !important;
+    border: 1px solid rgba(255,107,0,0.2) !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-urgency-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.cdh-urgency-text h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: #FFFFFF;
+}
+
+.cdh-urgency-text p {
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    margin: 0;
+}
+
+.cdh-countdown {
+    display: flex;
+    gap: 12px;
+}
+
+.cdh-countdown-item {
+    text-align: center;
+    background: rgba(255,107,0,0.1);
+    border: 1px solid rgba(255,107,0,0.3);
+    border-radius: 10px;
+    padding: 10px 14px;
+    min-width: 60px;
+}
+
+.cdh-countdown-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FF6B00;
+    display: block;
+}
+
+.cdh-countdown-label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   FAQ - GRAPHY VISIBILITY FIX
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-faq {
+    background: #12121A !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-faq-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 16px !important;
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+    visibility: visible !important;
+}
+
+.cdh-faq-item {
+    background: #1A1A25 !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-faq-item:hover {
+    border-color: rgba(255,107,0,0.3);
+}
+
+.cdh-faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    color: #FFFFFF;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cdh-faq-question:hover {
+    background: rgba(255,255,255,0.02);
+}
+
+.cdh-faq-question i {
+    color: #FF6B00;
+    font-size: 13px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.cdh-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.cdh-faq-answer-content {
+    padding: 0 20px 20px;
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.cdh-faq-item.active .cdh-faq-question i {
+    transform: rotate(180deg);
+}
+
+.cdh-faq-item.active .cdh-faq-answer {
+    max-height: 250px;
+}
+
+.cdh-faq-item.active {
+    border-color: rgba(255,107,0,0.4);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   FOOTER - GRAPHY VISIBILITY FIX
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-footer {
+    background: #0A0A0F !important;
+    border-top: 1px solid rgba(255,255,255,0.08) !important;
+    padding: 60px 0 24px !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.cdh-footer-banner {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255,107,0,0.1) 0%, rgba(124,58,237,0.1) 100%);
+    border: 1px solid rgba(255,107,0,0.2);
+    border-radius: 20px;
+    padding: 40px 30px;
+    margin-bottom: 50px;
+}
+
+.cdh-footer-banner h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cdh-footer-banner p {
+    color: rgba(255,255,255,0.6);
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+.cdh-footer-banner-ctas {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.cdh-footer-grid {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr 1fr 1fr !important;
+    gap: 40px !important;
+    margin-bottom: 40px !important;
+    visibility: visible !important;
+}
+
+.cdh-footer-brand h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.cdh-footer-tagline {
+    color: #FF6B00;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.cdh-footer-brand > p {
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.cdh-footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.cdh-footer-social a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.cdh-footer-social a:hover {
+    background: #FF6B00;
+    border-color: #FF6B00;
+    transform: translateY(-3px);
+}
+
+.cdh-footer-links h4 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.cdh-footer-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.cdh-footer-links a:hover {
+    color: #FF6B00;
+    transform: translateX(5px);
+}
+
+.cdh-footer-tech {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 24px;
+}
+
+.cdh-footer-tech p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.cdh-footer-tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.cdh-footer-tech-icons i {
+    font-size: 32px;
+    transition: transform 0.3s ease;
+}
+
+.cdh-footer-tech-icons i:hover {
+    transform: scale(1.2);
+}
+
+.cdh-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.cdh-footer-bottom p {
+    color: rgba(255,255,255,0.4);
+    font-size: 13px;
+    margin: 0;
+}
+
+.cdh-footer-bottom a {
+    color: rgba(255,255,255,0.4);
+    font-size: 13px;
+}
+
+.cdh-footer-bottom a:hover {
+    color: #FF6B00;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   STICKY CTA - GRAPHY VISIBILITY FIX
+   ══════════════════════════════════════════════════════════════════════════ */
+.cdh-sticky {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: rgba(10,10,15,0.95) !important;
+    border-top: 1px solid rgba(255,107,0,0.3) !important;
+    padding: 14px 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    z-index: 1000 !important;
+    visibility: visible !important;
+}
+
+.cdh-sticky-text {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.cdh-sticky-ctas {
+    display: flex;
+    gap: 10px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+    .cdh-section { padding: 70px 0; }
+    
+    .cdh-hero { min-height: auto !important; padding: 40px 0 !important; }
+    
+    .cdh-hero-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    
+    .cdh-hero-content { text-align: center !important; }
+    .cdh-hero-batch { justify-content: center !important; }
+    .cdh-hero-ctas { justify-content: center; }
+    .cdh-hero-stats { justify-content: center; }
+    
+    .cdh-hero-image {
+        order: -1 !important;
+        min-height: 520px !important;
+    }
+    
+    .cdh-footer-grid { grid-template-columns: 1fr 1fr !important; }
+    
+    .cdh-tech-grid {
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: 8px !important;
+        max-width: 100% !important;
+        padding: 0 10px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .cdh-section { padding: 60px 0; }
+    
+    .cdh-hero { padding: 30px 0 !important; }
+    
+    .cdh-hero-image { min-height: 480px !important; }
+    
+    .cdh-photo-frame { width: 280px !important; height: 280px !important; }
+    .cdh-arc-white { width: 320px !important; height: 320px !important; }
+    
+    .cdh-badge-card { padding: 8px 12px !important; }
+    .cdh-badge-icon { width: 28px !important; height: 28px !important; font-size: 14px !important; }
+    .cdh-badge-text { font-size: 11px !important; }
+    
+    .cdh-badge-1 { top: 30px !important; right: -10px !important; }
+    .cdh-badge-2 { top: 110px !important; left: -20px !important; }
+    .cdh-badge-3 { top: 220px !important; right: -15px !important; }
+    .cdh-badge-4 { bottom: 80px !important; left: -10px !important; }
+    .cdh-badge-5 { bottom: 20px !important; right: 20px !important; }
+    
+    .cdh-social-icon { width: 42px !important; height: 42px !important; }
+    .cdh-social-icon i { font-size: 20px !important; }
+    .cdh-social-icon.youtube { top: 20px !important; left: 15px !important; }
+    .cdh-social-icon.instagram { bottom: 60px !important; left: 10px !important; }
+    .cdh-social-icon.facebook { bottom: 40px !important; right: 20px !important; }
+    
+    .cdh-hero-stats { gap: 24px; }
+    .cdh-hero-stat-value { font-size: 28px; }
+    
+    .cdh-footer-bottom { flex-direction: column; text-align: center; }
+    
+    .cdh-urgency-content { flex-direction: column; gap: 14px; }
+    
+    .cdh-sticky { flex-direction: column; gap: 10px; padding: 12px 14px; }
+    
+    .cdh-page { padding-bottom: 100px; }
+    
+    .cdh-footer-grid { grid-template-columns: 1fr !important; text-align: center; }
+    .cdh-footer-social { justify-content: center; }
+    .cdh-footer-links a { justify-content: center; }
+    
+    .cdh-tech-card { padding: 10px 5px !important; border-radius: 8px !important; }
+    .cdh-tech-card i { font-size: 22px !important; margin-bottom: 4px !important; }
+    .cdh-tech-card span { font-size: 9px !important; }
+}
+
+@media (max-width: 480px) {
+    .cdh-container { padding: 0 16px; }
+    
+    .cdh-hero { padding: 20px 0 !important; }
+    
+    .cdh-hero-image { min-height: 420px !important; }
+    
+    .cdh-photo-frame { width: 240px !important; height: 240px !important; }
+    .cdh-arc-white { width: 280px !important; height: 280px !important; }
+    
+    .cdh-badge-text { font-size: 10px !important; }
+    
+    .cdh-tech-float { width: 32px !important; height: 32px !important; font-size: 16px !important; }
+    
+    .cdh-btn-lg { padding: 14px 24px; font-size: 15px; }
+    
+    .cdh-hero-ctas { flex-direction: column; align-items: center; }
+    .cdh-hero-ctas .cdh-btn { width: 100%; max-width: 280px; }
+    
+    .cdh-countdown-item { min-width: 48px; padding: 6px 10px; }
+    .cdh-countdown-value { font-size: 18px; }
+    
+    .cdh-feature-card, .cdh-curriculum-card, .cdh-testimonial-card { padding: 20px; }
+    
+    .cdh-tech-grid { grid-template-columns: repeat(5, 1fr) !important; gap: 6px !important; }
+    .cdh-tech-card { padding: 8px 4px !important; }
+    .cdh-tech-card i { font-size: 20px !important; margin-bottom: 3px !important; }
+    .cdh-tech-card span { font-size: 8px !important; }
+    
+    .cdh-hero-stat-value { font-size: 20px !important; }
+    .cdh-hero-stat-label { font-size: 9px !important; }
+    .cdh-hero-stats { gap: 12px !important; padding-top: 16px !important; }
+}
+</style><div class="cdh-page" id="1765885705472">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM8GJ3ZM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         🔧 ANNOUNCEMENT BAR - EDIT HERE
+         ═══════════════════════════════════════════════════════════════════ -->
+    <div class="cdh-announce">
+        <div class="cdh-announce-content">
+            <span class="cdh-announce-text">
+                <!-- ✏️ EDIT: Announcement Text -->
+                🚀 Batch 42 Starting 18th December 2025 — Limited Seats Available!
+            </span>
+            <a href="https://www.clouddevopshub.com/s/pages/best-free-aws-gcp-devops-ai-course-for-40lpa-high-paying-jobs" target="_blank" class="cdh-announce-btn">Enroll Now →</a>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         🔧 HERO SECTION - MAIN EDITING AREA
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="cdh-hero">
+        <div class="cdh-container">
+            <div class="cdh-hero-grid">
+                <!-- Left Column - Content -->
+                <div class="cdh-hero-content">
+                    
+                    <!-- ✏️ EDIT: Batch Badges -->
+                    <div class="cdh-hero-batch">
+                        <span class="cdh-badge cdh-badge-live">Live Now</span>
+                        <span class="cdh-badge cdh-badge-primary" style="margin-left: 10px;">Batch 42 • 55 Days</span>
+                    </div>
+                    
+                    <!-- ✏️ EDIT: Main Heading -->
+                    <h1 class="cdh-display cdh-hero-title">
+                        <strong>Crack High Package Jobs<br>
+                        <span class="cdh-gradient-text">With CloudDevOpsHub</span></strong>
+                    </h1>
+                    
+                    <!-- ✏️ EDIT: Sub Heading -->
+                    <p class="cdh-hero-subtitle">
+                        Transform your career in just <strong>55 days</strong> with 100% live, interactive sessions. 
+                        Master <strong>AWS + Azure + GCP + DevOps + AI</strong> and land <strong>15-40+ LPA</strong> roles at top MNCs.
+                    </p>
+                    
+                    <!-- ✏️ EDIT: CTA Buttons -->
+                    <div class="cdh-hero-ctas">
+                        <div class="cdh-btn-robot-wrap">
+                            <a href="https://www.clouddevopshub.com/s/pages/best-free-aws-gcp-devops-ai-course-for-40lpa-high-paying-jobs" target="_blank" class="cdh-btn cdh-btn-primary cdh-btn-lg">
+                                <i class="fa-solid fa-rocket"></i>
+                                Join Current + Next Batch
+                            </a>
+                            <!-- AI Robot -->
+                            <div class="cdh-robot">
+                                <div class="cdh-robot-antenna"></div>
+                                <div class="cdh-robot-head">
+                                    <div class="cdh-robot-eye left"></div>
+                                    <div class="cdh-robot-eye right"></div>
+                                </div>
+                                <div class="cdh-robot-body"></div>
+                                <div class="cdh-robot-arm left"></div>
+                                <div class="cdh-robot-arm right"></div>
+                                <div class="cdh-robot-leg left"></div>
+                                <div class="cdh-robot-leg right"></div>
+                            </div>
+                        </div>
+                        <!-- ✏️ EDIT: WhatsApp Link -->
+                        <a href="https://chat.whatsapp.com/HtdFsTVrYYwLe5uGUWcCqA" target="_blank" class="cdh-btn cdh-btn-secondary cdh-btn-lg">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            Join Whatsapp
+                        </a>
+                    </div>
+                    
+                    <!-- ✏️ EDIT: Stats Section -->
+                    <div class="cdh-hero-stats" style="text-transform: uppercase;">
+                        <div class="cdh-hero-stat">
+                            <span class="cdh-hero-stat-value">41+</span>
+                            <span class="cdh-hero-stat-label">Batches Completed</span>
+                        </div>
+                        <div class="cdh-hero-stat">
+                            <span class="cdh-hero-stat-value">6000+</span>
+                            <span class="cdh-hero-stat-label">Happy Learners</span>
+                        </div>
+                        <div class="cdh-hero-stat">
+                            <span class="cdh-hero-stat-value">75K+</span>
+                            <span class="cdh-hero-stat-label">Community Members</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ═══════════════════════════════════════════════════════════
+                     🔧 RIGHT COLUMN - PHOTO & BADGES
+                     ═══════════════════════════════════════════════════════════ -->
+                <div class="cdh-hero-image">
+                    <div class="cdh-bg-glow"></div>
+                    <div class="cdh-arc-white"></div>
+                    
+                    <!-- Photo Frame -->
+                    <div class="cdh-photo-frame">
+                        <div class="cdh-photo-ring">
+                            <div class="cdh-photo-inner">
+                                <!-- ✏️ EDIT: YOUR PHOTO URL -->
+                                <img src="/s/pages/assets/images/gc6mTuntitleddesign20251212t044614.664.png" alt="Vikas Singh" data-filename="Untitled design - 2025-12-12T044614.664.png">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ═══════════════════════════════════════════════════════
+                         ✏️ SOCIAL MEDIA ICONS - EDIT LINKS HERE
+                         ═══════════════════════════════════════════════════════ -->
+                    
+                    <!-- YouTube - Top Left -->
+                    <a href="https://www.youtube.com/@CloudDevOpsHub" target="_blank" class="cdh-social-icon youtube" title="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    
+                    <!-- Instagram - Bottom Left -->
+                    <a href="https://www.instagram.com/clouddevopshub" target="_blank" class="cdh-social-icon instagram" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    
+                    <!-- Facebook - Bottom Right -->
+                    <a href="https://www.facebook.com/clouddevopshub" target="_blank" class="cdh-social-icon facebook" title="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    
+                    <!-- ═══════════════════════════════════════════════════════
+                         ✏️ FLOATING BADGES - EDIT TEXT HERE
+                         ═══════════════════════════════════════════════════════ -->
+                    
+                    <!-- Badge 1: Top Right -->
+                    <div class="cdh-badge-card cdh-badge-1">
+                        <div class="cdh-badge-icon orange">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <span class="cdh-badge-text">Multi-Cloud + DevOps with AIExpert</span>
+                    </div>
+                    
+                    <!-- Badge 2: Left Side -->
+                    <div class="cdh-badge-card cdh-badge-2">
+                        <div class="cdh-badge-icon blue">
+                            <i class="fa-brands fa-aws"></i>
+                        </div>
+                        <span class="cdh-badge-text">3X Cloud &amp; AI Certified</span>
+                    </div>
+                    
+                    <!-- Badge 3: Right Side -->
+                    <div class="cdh-badge-card cdh-badge-3">
+                        <div class="cdh-badge-icon green">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <span class="cdh-badge-text">15+ Years IT Experience</span>
+                    </div>
+                    
+                    <!-- Badge 4: Bottom Left -->
+                    <div class="cdh-badge-card cdh-badge-4">
+                        <div class="cdh-badge-icon purple">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <span class="cdh-badge-text">58K+ Community in WhatsApp</span>
+                    </div>
+                    
+                    <!-- Badge 5: Bottom Right (with avatars) -->
+                    <div class="cdh-badge-card cdh-badge-5">
+                        <div class="cdh-avatar-stack">
+                            <span>A</span>
+                            <span>R</span>
+                            <span>S</span>
+                        </div>
+                        <span class="cdh-badge-text">6000+ Trained Students</span>
+                    </div>
+                    
+                    <!-- Decorative Elements -->
+                    <span class="cdh-x-mark x1">✕</span>
+                    <span class="cdh-x-mark x2">✕</span>
+                    <span class="cdh-x-mark x3">+</span>
+                    <span class="cdh-x-mark x4">✕</span>
+                    
+                    <span class="cdh-dot orange d1"></span>
+                    <span class="cdh-dot white d2"></span>
+                    <span class="cdh-dot orange d3"></span>
+                    
+                    <div class="cdh-dots-grid">
+                        <span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    
+                    <!-- Floating Tech Icons -->
+                    <div class="cdh-tech-float t1">
+                        <i class="devicon-kubernetes-plain" style="color: #326CE5;"></i>
+                    </div>
+                    <div class="cdh-tech-float t2">
+                        <i class="devicon-docker-plain" style="color: #2496ED;"></i>
+                    </div>
+                    <div class="cdh-tech-float t3">
+                        <i class="devicon-terraform-plain" style="color: #7B42BC;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH BANNER -->
+    <section class="cdh-tech-banner">
+        <div class="cdh-tech-banner-track">
+            <div class="cdh-tech-banner-item"><i class="devicon-amazonwebservices-plain-wordmark"></i> AWS</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-azure-plain"></i> Azure</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-googlecloud-plain"></i> GCP</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-docker-plain"></i> Docker</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-kubernetes-plain"></i> Kubernetes</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-terraform-plain"></i> Terraform</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-ansible-plain"></i> Ansible</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-jenkins-line"></i> Jenkins</div>
+            <div class="cdh-tech-banner-item"><i class="fa-solid fa-robot"></i> AI/ML</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-linux-plain"></i> Linux</div>
+            <!-- Duplicate for seamless scroll -->
+            <div class="cdh-tech-banner-item"><i class="devicon-amazonwebservices-plain-wordmark"></i> AWS</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-azure-plain"></i> Azure</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-googlecloud-plain"></i> GCP</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-docker-plain"></i> Docker</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-kubernetes-plain"></i> Kubernetes</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-terraform-plain"></i> Terraform</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-ansible-plain"></i> Ansible</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-jenkins-line"></i> Jenkins</div>
+            <div class="cdh-tech-banner-item"><i class="fa-solid fa-robot"></i> AI/ML</div>
+            <div class="cdh-tech-banner-item"><i class="devicon-linux-plain"></i> Linux</div>
+        </div>
+    </section>
+
+    <!-- COMPANY LOGOS -->
+    <section class="cdh-companies">
+        <div class="cdh-container">
+            <p class="cdh-companies-title">🎯 <b>Our Alumni Work At Top MNCs Worldwide</b></p>
+        </div>
+        <div class="cdh-companies-track">
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-brands fa-amazon" style="color:#FF9900;"></i> Amazon</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-brands fa-google" style="color:#4285F4;"></i> Google</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-brands fa-microsoft" style="color:#00A4EF;"></i> Microsoft</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-brands fa-meta" style="color:#0668E1;"></i> Meta</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-solid fa-bag-shopping" style="color:#F7D000;"></i> Flipkart</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-solid fa-store" style="color:#0071CE;"></i> Walmart</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-solid fa-building" style="color:#007CC3;"></i> Infosys</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-solid fa-building-columns" style="color:#FE0000;"></i> TCS</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-solid fa-globe" style="color:#A100FF;"></i> Accenture</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-brands fa-oracle" style="color:#F80000;"></i> Oracle</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-brands fa-salesforce" style="color:#00A1E0;"></i> Salesforce</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-brands fa-ibm" style="color:#0530AD;"></i> IBM</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-brands fa-adobe" style="color:#FF0000;"></i> Adobe</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-solid fa-mobile-screen" style="color:#FF4500;"></i> Paytm</span></div>
+            <!-- Duplicate -->
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-brands fa-amazon" style="color:#FF9900;"></i> Amazon</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-brands fa-google" style="color:#4285F4;"></i> Google</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-brands fa-microsoft" style="color:#00A4EF;"></i> Microsoft</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-brands fa-meta" style="color:#0668E1;"></i> Meta</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-solid fa-bag-shopping" style="color:#F7D000;"></i> Flipkart</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-solid fa-store" style="color:#0071CE;"></i> Walmart</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-solid fa-building" style="color:#007CC3;"></i> Infosys</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-solid fa-building-columns" style="color:#FE0000;"></i> TCS</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-solid fa-globe" style="color:#A100FF;"></i> Accenture</span></div>
+            <div class="cdh-company-logo"><span class="cdh-company-name"><i class="fa-brands fa-oracle" style="color:#F80000;"></i> Oracle</span></div>
+        </div>
+    </section>
+
+    <!-- PROBLEM/SOLUTION -->
+    <section class="cdh-section cdh-problem">
+        <div class="cdh-container">
+            <div class="cdh-problem-grid">
+                <div class="cdh-problem-content">
+                    <span class="cdh-caption" style="color: #EF4444; display: block; margin-bottom: 14px;">THE PROBLEM</span>
+                    <h2 class="cdh-h1">Struggling to Break Into High-Paying Tech Roles?</h2>
+                    <ul class="cdh-problem-list">
+                        <li><i class="fa-solid fa-xmark"></i> Overwhelming amount of tools and technologies to learn</li>
+                        <li><i class="fa-solid fa-xmark"></i> Outdated courses that don't match real industry requirements</li>
+                        <li><i class="fa-solid fa-xmark"></i> No real-world project experience to showcase on your resume</li>
+                        <li><i class="fa-solid fa-xmark"></i> Lack of proper mentorship and interview preparation</li>
+                        <li><i class="fa-solid fa-xmark"></i> Stuck in low-paying roles with no clear growth path</li>
+                    </ul>
+                </div>
+                <div class="cdh-problem-content">
+                    <span class="cdh-caption" style="color: #10B981; display: block; margin-bottom: 14px;">THE SOLUTION</span>
+                    <h2 class="cdh-h1">CloudDevOpsHub Proven 55-Day Transformation</h2>
+                    <ul class="cdh-problem-list">
+                        <li><i class="fa-solid fa-check"></i> Structured curriculum covering exactly what companies need</li>
+                        <li><i class="fa-solid fa-check"></i> 100% live sessions with real-time doubt clearing</li>
+                        <li><i class="fa-solid fa-check"></i> 5+ industry-grade projects for your portfolio</li>
+                        <li><i class="fa-solid fa-check"></i> Daily MNC referrals + Weekly mock interviews</li>
+                        <li><i class="fa-solid fa-check"></i> 1000 Day's community access</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="cdh-section cdh-features" id="cdh-features">
+        <div class="cdh-container">
+            <div class="cdh-section-header">
+                <span class="cdh-caption" style="color: #FF6B00;">WHY CHOOSE US</span>
+                <h2 class="cdh-h1">What Makes CloudDevOpsHub <span class="cdh-gradient-text">Different</span></h2>
+                <p>We don't just teach — we transform careers with a battle-tested approach.</p>
+            </div>
+            <div class="cdh-features-grid">
+                <div class="cdh-card cdh-feature-card">
+                    <div class="cdh-feature-icon"><i class="fa-solid fa-video"></i></div>
+                    <h3 class="cdh-h3">100% Live Sessions</h3>
+                    <p>No recorded content. Every session is live with real-time interaction and doubt clearing.</p>
+                </div>
+                <div class="cdh-card cdh-feature-card">
+                    <div class="cdh-feature-icon"><i class="fa-solid fa-cloud"></i></div>
+                    <h3 class="cdh-h3">Multi-Cloud Mastery</h3>
+                    <p>Learn AWS, Azure, AND GCP together — become a true multi-cloud architect.</p>
+                </div>
+                <div class="cdh-card cdh-feature-card">
+                    <div class="cdh-feature-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3 class="cdh-h3">Weekly Referrals</h3>
+                    <p>Get direct referrals to Amazon, Google, Microsoft, and 50+ top MNC companies.</p>
+                </div>
+                <div class="cdh-card cdh-feature-card">
+                    <div class="cdh-feature-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3 class="cdh-h3">75,000+ Community</h3>
+                    <p>Join India's Cloud &amp; DevOps community for networking and support.</p>
+                </div>
+                <div class="cdh-card cdh-feature-card">
+                    <div class="cdh-feature-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3 class="cdh-h3">6+ Real Projects</h3>
+                    <p>Build production-grade projects that impress interviewers and recruiters.</p>
+                </div>
+                <div class="cdh-card cdh-feature-card">
+                    <div class="cdh-feature-icon"><i class="fa-solid fa-infinity"></i></div>
+                    <h3 class="cdh-h3">1000 Day's Access</h3>
+                    <p>WhatsApp community access, updates, and support — plus 1000 days of recorded access</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         UPCOMING BATCH SECTION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="cdh-section" id="cdh-pricing" style="background: linear-gradient(180deg, #0A0A0F 0%, #0D0D18 100%) !important;">
+        <div class="cdh-container">
+            <div class="cdh-upcoming-grid">
+                <!-- Left - Image -->
+                <div class="cdh-upcoming-image">
+                    <!-- ✏️ EDIT: Batch Image URL -->
+                    <img src="/s/pages/assets/images/CiqFxyourparagraphtext2.png" alt="LAKSHYA Batch 42" style="width: 100%; height: auto; display: block;">
+                </div>
+                
+                <!-- Right - Details -->
+                <div class="cdh-upcoming-content">
+                    <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.08); padding: 10px 20px; border-radius: 30px; font-size: 14px; font-weight: 500; margin-bottom: 20px;">
+                        <span style="width: 12px; height: 12px; background: #EF4444; border-radius: 50%; animation: cdh-pulse 2s infinite;"></span>Batch-42 Live&nbsp;</div><!-- ✏️ EDIT: Batch Title -->
+                    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 4vw, 42px); font-weight: 700; line-height: 1.2; margin-bottom: 16px;">
+                        Multi-Cloud + DevOps with AI<br><span class="cdh-gradient-text">LAKSHYA - Batch 42&nbsp;</span></h2>
+                    
+                    <p style="font-size: 16px; color: rgba(255,255,255,0.7); margin-bottom: 25px;">Master AWS, Azure, GCP + Top 10 DevOps tools with AI</p>
+                    
+                    <ul style="list-style: none; padding: 0; margin: 0 0 25px 0;">
+                        <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; font-size: 15px; line-height: 1.5;">
+                            <i class="fa-solid fa-circle-check" style="color: #22C55E; font-size: 18px; margin-top: 2px; flex-shrink: 0;"></i>
+                            <span><strong style="color: #FFFFFF;">55 Days Live Intensive Training</strong> — Daily Sessions (Mon-Sat, 8-9:30 AM IST)</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; font-size: 15px; line-height: 1.5;">
+                            <i class="fa-solid fa-circle-check" style="color: #22C55E; font-size: 18px; margin-top: 2px; flex-shrink: 0;"></i>
+                            <span>Live Doubt-Solving &amp; Mentorship Sessions — Every Day</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; font-size: 15px; line-height: 1.5;">
+                            <i class="fa-solid fa-circle-check" style="color: #22C55E; font-size: 18px; margin-top: 2px; flex-shrink: 0;"></i>
+                            <span><strong style="color: #FFFFFF;">Start Date:</strong> Live classes begin on <strong style="color: #FFFFFF;">18th December 2025</strong></span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; font-size: 15px; line-height: 1.5;">
+                            <i class="fa-solid fa-circle-check" style="color: #22C55E; font-size: 18px; margin-top: 2px; flex-shrink: 0;"></i>
+                            <span><strong style="color: #FFFFFF;">Bonus Worth ₹20,000 — FREE</strong> (Resume Building, Interview Prep, LinkedIn Optimization)</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; font-size: 15px; line-height: 1.5;">
+                            <i class="fa-solid fa-circle-check" style="color: #22C55E; font-size: 18px; margin-top: 2px; flex-shrink: 0;"></i>
+                            <span><strong style="color: #FFFFFF;">1000 Days Recordings Access</strong> — All class recordings available same day</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; font-size: 15px; line-height: 1.5;">
+                            <i class="fa-solid fa-circle-check" style="color: #22C55E; font-size: 18px; margin-top: 2px; flex-shrink: 0;"></i>
+                            <span><strong style="color: #FFFFFF;">MNC Referrals Included</strong> — Direct referrals to Top MNCs companies</span>
+                        </li>
+                    </ul>
+                    
+                    <div>
+                        <p style="font-size: 18px; font-weight: 600; background: linear-gradient(135deg, #FF6B00 0%, #FFAB00 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 20px;">Join now — Early Bird Offer, limited seats!</p>
+                        <a href="https://www.clouddevopshub.com/s/pages/best-free-aws-gcp-devops-ai-course-for-40lpa-high-paying-jobs" target="_blank" class="cdh-btn cdh-btn-primary cdh-btn-lg">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="cdh-section cdh-tech" id="cdh-tech">
+        <div class="cdh-container">
+            <div class="cdh-section-header">
+                <span class="cdh-caption">TECHNOLOGIES</span>
+                <h2 class="cdh-h1">Master In-Demand <span class="cdh-gradient-text">Tech Stack</span></h2>
+                <p>Everything you need to become a complete Cloud &amp; DevOps Engineer.</p>
+            </div>
+            <div class="cdh-tech-grid">
+                <div class="cdh-tech-card"><i class="devicon-amazonwebservices-plain-wordmark cdh-c-aws"></i><span>AWS</span></div>
+                <div class="cdh-tech-card"><i class="devicon-azure-plain cdh-c-azure"></i><span>Azure</span></div>
+                <div class="cdh-tech-card"><i class="devicon-googlecloud-plain cdh-c-gcp"></i><span>GCP</span></div>
+                <div class="cdh-tech-card"><i class="devicon-docker-plain cdh-c-docker"></i><span>Docker</span></div>
+                <div class="cdh-tech-card"><i class="devicon-kubernetes-plain cdh-c-k8s"></i><span>Kubernetes</span></div>
+                <div class="cdh-tech-card"><i class="devicon-terraform-plain cdh-c-terraform"></i><span>Terraform</span></div>
+                <div class="cdh-tech-card"><i class="devicon-ansible-plain cdh-c-ansible"></i><span>Ansible</span></div>
+                <div class="cdh-tech-card"><i class="devicon-jenkins-line cdh-c-jenkins"></i><span>Jenkins</span></div>
+                <div class="cdh-tech-card"><i class="devicon-linux-plain cdh-c-linux"></i><span>Linux</span></div>
+                <div class="cdh-tech-card"><i class="devicon-python-plain cdh-c-python"></i><span>Python</span></div>
+                <div class="cdh-tech-card"><i class="devicon-git-plain cdh-c-git"></i><span>Git</span></div>
+                <div class="cdh-tech-card"><i class="fa-brands fa-github cdh-c-github"></i><span>GitHub</span></div>
+                <div class="cdh-tech-card"><i class="fa-solid fa-fire cdh-c-prometheus"></i><span>Prometheus</span></div>
+                <div class="cdh-tech-card"><i class="fa-solid fa-chart-line cdh-c-grafana"></i><span>Grafana</span></div>
+                <div class="cdh-tech-card"><i class="fa-solid fa-robot cdh-c-ai"></i><span>AI/ML</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRICULUM -->
+    <section class="cdh-section cdh-curriculum" id="cdh-curriculum">
+        <div class="cdh-container">
+            <div class="cdh-section-header">
+                <span class="cdh-caption" style="color: #FF6B00;">CURRICULUM</span>
+                <h2 class="cdh-h1">55 Day's <span class="cdh-gradient-text">Transformation Journey</span></h2>
+                <p>Industry-aligned curriculum designed for maximum impact in minimum time.</p>
+            </div>
+            <div class="cdh-curriculum-grid">
+                <div class="cdh-card cdh-curriculum-card">
+                    <div class="cdh-curriculum-header">
+                        <div class="cdh-curriculum-week">W1-2</div>
+                        <div class="cdh-curriculum-title">Linux &amp; Networking Fundamentals</div>
+                    </div>
+                    <div class="cdh-curriculum-topics">
+                        <span class="cdh-curriculum-topic">Linux Commands</span>
+                        <span class="cdh-curriculum-topic">Shell Scripting</span>
+                        <span class="cdh-curriculum-topic">Networking</span>
+                        <span class="cdh-curriculum-topic">SSH &amp; Security</span>
+                    </div>
+                </div>
+                <div class="cdh-card cdh-curriculum-card">
+                    <div class="cdh-curriculum-header">
+                        <div class="cdh-curriculum-week">W3-4</div>
+                        <div class="cdh-curriculum-title">AWS Deep Dive</div>
+                    </div>
+                    <div class="cdh-curriculum-topics">
+                        <span class="cdh-curriculum-topic">EC2 &amp; VPC</span>
+                        <span class="cdh-curriculum-topic">S3 &amp; IAM</span>
+                        <span class="cdh-curriculum-topic">Lambda</span>
+                        <span class="cdh-curriculum-topic">CloudFormation</span>
+                    </div>
+                </div>
+                <div class="cdh-card cdh-curriculum-card">
+                    <div class="cdh-curriculum-header">
+                        <div class="cdh-curriculum-week">W5-6</div>
+                        <div class="cdh-curriculum-title">Docker &amp; Kubernetes</div>
+                    </div>
+                    <div class="cdh-curriculum-topics">
+                        <span class="cdh-curriculum-topic">Docker</span>
+                        <span class="cdh-curriculum-topic">Docker Compose</span>
+                        <span class="cdh-curriculum-topic">Kubernetes</span>
+                        <span class="cdh-curriculum-topic">Helm Charts</span>
+                    </div>
+                </div>
+                <div class="cdh-card cdh-curriculum-card">
+                    <div class="cdh-curriculum-header">
+                        <div class="cdh-curriculum-week">W7</div>
+                        <div class="cdh-curriculum-title">CI/CD Pipelines</div>
+                    </div>
+                    <div class="cdh-curriculum-topics">
+                        <span class="cdh-curriculum-topic">Jenkins</span>
+                        <span class="cdh-curriculum-topic">GitHub Actions</span>
+                        <span class="cdh-curriculum-topic">ArgoCD</span>
+                        <span class="cdh-curriculum-topic">GitOps</span>
+                    </div>
+                </div>
+                <div class="cdh-card cdh-curriculum-card">
+                    <div class="cdh-curriculum-header">
+                        <div class="cdh-curriculum-week">W8</div>
+                        <div class="cdh-curriculum-title">Infrastructure as Code</div>
+                    </div>
+                    <div class="cdh-curriculum-topics">
+                        <span class="cdh-curriculum-topic">Terraform</span>
+                        <span class="cdh-curriculum-topic">Ansible</span>
+                        <span class="cdh-curriculum-topic">Multi-Cloud IaC</span>
+                        <span class="cdh-curriculum-topic">Best Practices</span>
+                    </div>
+                </div>
+                <div class="cdh-card cdh-curriculum-card">
+                    <div class="cdh-curriculum-header">
+                        <div class="cdh-curriculum-week">W9</div>
+                        <div class="cdh-curriculum-title">Monitoring &amp; Projects</div>
+                    </div>
+                    <div class="cdh-curriculum-topics">
+                        <span class="cdh-curriculum-topic">Prometheus</span>
+                        <span class="cdh-curriculum-topic">Grafana</span>
+                        <span class="cdh-curriculum-topic">ELK Stack</span>
+                        <span class="cdh-curriculum-topic">Final Projects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         🔧 URGENCY SECTION - EDIT COUNTDOWN DATE
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="cdh-section-sm cdh-urgency">
+        <div class="cdh-container">
+            <div class="cdh-urgency-content">
+                <div class="cdh-urgency-text">
+                    <!-- ✏️ EDIT: Urgency Text -->
+                    <h3>⏰ Batch 42 Starts December 18th</h3>
+                    <p>Only 15 seats remaining — Don't miss this opportunity!</p>
+                </div>
+                <div class="cdh-countdown">
+                    <div class="cdh-countdown-item">
+                        <span class="cdh-countdown-value" id="cdh-days">01</span>
+                        <span class="cdh-countdown-label">Days</span>
+                    </div>
+                    <div class="cdh-countdown-item">
+                        <span class="cdh-countdown-value" id="cdh-hours">13</span>
+                        <span class="cdh-countdown-label">Hours</span>
+                    </div>
+                    <div class="cdh-countdown-item">
+                        <span class="cdh-countdown-value" id="cdh-mins">23</span>
+                        <span class="cdh-countdown-label">Mins</span>
+                    </div>
+                    <div class="cdh-countdown-item">
+                        <span class="cdh-countdown-value" id="cdh-secs">15</span>
+                        <span class="cdh-countdown-label">Secs</span>
+                    </div>
+                </div>
+                <a href="https://www.clouddevopshub.com/s/pages/best-free-aws-gcp-devops-ai-course-for-40lpa-high-paying-jobs" target="_blank" class="cdh-btn cdh-btn-primary">
+                    <i class="fa-solid fa-rocket"></i> Enroll Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         MENTOR SECTION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="cdh-section" id="cdh-mentor" style="background: linear-gradient(180deg, #12121A 0%, #0A0A0F 100%) !important;">
+        <div class="cdh-container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center;">
+                <div style="text-align: center;">
+                    <!-- ✏️ EDIT: Mentor Photo URL -->
+                    <img src="/s/pages/assets/images/bLYk7whatsapp5.png" alt="Vikas Ratnawat" style="width: 280px; height: 280px; border-radius: 50%; border: 4px solid rgba(255,107,0,0.4); box-shadow: 0 20px 60px rgba(255,107,0,0.2); object-fit: cover;">
+                </div>
+                <div>
+                    <span class="cdh-caption" style="color: #FF6B00; display: block; margin-bottom: 10px;">MEET YOUR MENTOR</span>
+                    <!-- ✏️ EDIT: Mentor Name -->
+                    <h2 class="cdh-h1">Vikas Ratnawat</h2>
+                    <!-- ✏️ EDIT: Mentor Role -->
+                    <p style="color: #FF6B00; font-weight: 600; font-size: 15px; margin-bottom: 20px;">Entrepreneur | IT Professional | Mentor | Corporate Trainer</p>
+                    <!-- ✏️ EDIT: Mentor Bio -->
+                    <p style="color: rgba(255,255,255,0.7); font-size: 15px; line-height: 1.7; margin-bottom: 24px;">
+                        With <strong style="color: #F9A825;">14+ years of real-time IT experience</strong>, Vikas is a seasoned expert in the global tech industry. He is an <strong>Ex-Microsoft MVP</strong> and <strong>PwC</strong> professional, holds <strong>3X global certifications</strong>, and has successfully delivered <strong>100+ POCs &amp; implementations</strong> across multiple domains.
+                    </p>
+                    <!-- ✏️ EDIT: Mentor Stats -->
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 24px;">
+                        <div style="text-align: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 10px;">
+                            <span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; color: #FF6B00; display: block; margin-bottom: 4px;">15+</span>
+                            <span style="font-size: 11px; color: rgba(255,255,255,0.5);">Years Exp</span>
+                        </div>
+                        <div style="text-align: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 10px;">
+                            <span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; color: #FF6B00; display: block; margin-bottom: 4px;">6K+</span>
+                            <span style="font-size: 11px; color: rgba(255,255,255,0.5);">Students</span>
+                        </div>
+                        <div style="text-align: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 10px;">
+                            <span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; color: #FF6B00; display: block; margin-bottom: 4px;">41+</span>
+                            <span style="font-size: 11px; color: rgba(255,255,255,0.5);">Batches</span>
+                        </div>
+                        <div style="text-align: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 10px;">
+                            <span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; color: #FF6B00; display: block; margin-bottom: 4px;">75K+</span>
+                            <span style="font-size: 11px; color: rgba(255,255,255,0.5);">Community</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                        <span style="display: flex; align-items: center; gap: 6px; padding: 8px 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; font-size: 12px; color: #FFFFFF;"><i class="fa-brands fa-microsoft" style="color: #FF6B00;"></i> Microsoft MVP</span>
+                        <span style="display: flex; align-items: center; gap: 6px; padding: 8px 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; font-size: 12px; color: #FFFFFF;"><i class="fa-brands fa-amazon" style="color: #FF6B00;"></i> Amazon</span>
+                        <span style="display: flex; align-items: center; gap: 6px; padding: 8px 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; font-size: 12px; color: #FFFFFF;"><i class="fa-brands fa-aws" style="color: #FF6B00;"></i> AWS Certified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         COURSE REVIEWS SECTION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="cdh-section cdh-reviews" id="cdh-reviews">
+        <div class="cdh-container">
+            <div class="cdh-section-header">
+                <span class="cdh-caption" style="color: #FF6B00 !important;">What Our Learners Say</span>
+                <h2 class="cdh-reviews-title">Course Reviews</h2>
+                <p>Real feedback from students who transformed their careers.</p>
+            </div>
+            <div class="cdh-reviews-grid">
+                <!-- Row 1 -->
+                <div class="cdh-review-card">
+                    <div class="cdh-review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="cdh-review-text">I learnt Git, Docker, Jenkins, and AWS hands-on. The step-by-step roadmap made it easy for beginners like me.</p>
+                    <div class="cdh-review-author">
+                        <div class="cdh-review-avatar"><img src="https://via.placeholder.com/48x48/e0e0e0/666666?text=MG" alt="Manish Gupta"></div>
+                        <div class="cdh-review-info">
+                            <h4>Manish Gupta</h4>
+                            <p>Junior Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cdh-review-card">
+                    <div class="cdh-review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="cdh-review-text">I liked how the course was focused on practical learning. Terraform and Ansible became my favorite topics.</p>
+                    <div class="cdh-review-author">
+                        <div class="cdh-review-avatar"><img src="https://via.placeholder.com/48x48/e0e0e0/666666?text=KP" alt="Kavya Patel"></div>
+                        <div class="cdh-review-info">
+                            <h4>Kavya Patel</h4>
+                            <p>DevOps Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cdh-review-card">
+                    <div class="cdh-review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="cdh-review-text">The group projects gave me real collaboration experience. Feels like working in a real DevOps team!</p>
+                    <div class="cdh-review-author">
+                        <div class="cdh-review-avatar"><img src="https://via.placeholder.com/48x48/e0e0e0/666666?text=RK" alt="Ritesh Kumar"></div>
+                        <div class="cdh-review-info">
+                            <h4>Ritesh Kumar</h4>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row 2 -->
+                <div class="cdh-review-card">
+                    <div class="cdh-review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="cdh-review-text">Thanks to CloudDevOpsHub, I finally deployed my first app using Docker Compose. Amazing experience!</p>
+                    <div class="cdh-review-author">
+                        <div class="cdh-review-avatar"><img src="https://via.placeholder.com/48x48/e0e0e0/666666?text=AS" alt="Aditi Singh"></div>
+                        <div class="cdh-review-info">
+                            <h4>Aditi Singh</h4>
+                            <p>CS Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cdh-review-card">
+                    <div class="cdh-review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="cdh-review-text">The community support and WhatsApp discussions are very helpful. Vikas sir clears every doubt patiently.</p>
+                    <div class="cdh-review-author">
+                        <div class="cdh-review-avatar"><img src="https://via.placeholder.com/48x48/e0e0e0/666666?text=HJ" alt="Harsh Jain"></div>
+                        <div class="cdh-review-info">
+                            <h4>Harsh Jain</h4>
+                            <p>Intern</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cdh-review-card">
+                    <div class="cdh-review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="cdh-review-text">I landed my first internship after completing the DevOps Bootcamp. Real success story!</p>
+                    <div class="cdh-review-author">
+                        <div class="cdh-review-avatar"><img src="https://via.placeholder.com/48x48/e0e0e0/666666?text=AD" alt="Ananya Das"></div>
+                        <div class="cdh-review-info">
+                            <h4>Ananya Das</h4>
+                            <p>Junior Cloud Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row 3 -->
+                <div class="cdh-review-card">
+                    <div class="cdh-review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="cdh-review-text">CI/CD and GitHub Actions were confusing before, but now I can set up complete pipelines confidently.</p>
+                    <div class="cdh-review-author">
+                        <div class="cdh-review-avatar"><img src="https://via.placeholder.com/48x48/e0e0e0/666666?text=VK" alt="Vikram Khanna"></div>
+                        <div class="cdh-review-info">
+                            <h4>Vikram Khanna</h4>
+                            <p>Backend Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cdh-review-card">
+                    <div class="cdh-review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="cdh-review-text">Affordable, practical, and beginner-friendly. Exactly what I was looking for!</p>
+                    <div class="cdh-review-author">
+                        <div class="cdh-review-avatar"><img src="https://via.placeholder.com/48x48/e0e0e0/666666?text=NS" alt="Neha Sharma"></div>
+                        <div class="cdh-review-info">
+                            <h4>Neha Sharma</h4>
+                            <p>Fresher</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cdh-review-card">
+                    <div class="cdh-review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="cdh-review-text">I liked how every module connects to real industry scenarios. No unnecessary theory!</p>
+                    <div class="cdh-review-author">
+                        <div class="cdh-review-avatar"><img src="https://via.placeholder.com/48x48/e0e0e0/666666?text=SM" alt="Saurabh Mishra"></div>
+                        <div class="cdh-review-info">
+                            <h4>Saurabh Mishra</h4>
+                            <p>System Admin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         WHATSAPP COMMUNITY SECTION (PROPERLY STYLED)
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="cdh-whatsapp-community" id="cdh-community">
+        <div class="cdh-container">
+            <!-- Header -->
+            <div class="cdh-whatsapp-header">
+                <span class="cdh-caption">Be Part of a Thriving DevOps Community</span>
+                <h2 class="cdh-whatsapp-title">Join the CloudDevOpsHub <span style="color: #FF6B00;">WhatsApp</span> Family</h2>
+            </div>
+            
+            <!-- Grid -->
+            <div class="cdh-whatsapp-grid">
+                <!-- Left Content -->
+                <div class="cdh-whatsapp-content">
+                    <h3>Grow Faster with Daily Learning in Our <span style="color: #FF6B00;">WhatsApp Community</span></h3>
+                    <p>Join the <strong>CloudDevOpsHub WhatsApp</strong> — a vibrant hub for learners, developers, and DevOps enthusiasts. Connect, collaborate, attend <strong>exclusive webinars</strong>, and level up your career with the power of community 🚀</p>
+                    <a href="https://chat.whatsapp.com/HtdFsTVrYYwLe5uGUWcCqA" target="_blank" class="cdh-whatsapp-btn">
+                        <i class="fa-brands fa-whatsapp"></i> Join WhatsApp Now
+                    </a>
+                </div>
+                
+                <!-- Right - Community Images Collage -->
+                <div class="cdh-whatsapp-images">
+                    <!-- ✏️ EDIT: Community Image URLs -->
+                    <div class="cdh-whatsapp-img cdh-whatsapp-img-1">
+                        <img src="/s/pages/assets/images/QHndOuntitleddesign20251205t053537.275.png" alt="Community">
+                    </div>
+                    <div class="cdh-whatsapp-img cdh-whatsapp-img-2">
+                        <img src="/s/pages/assets/images/ELj3Zwhatsapp7.png" alt="WhatsApp Group">
+                    </div>
+                    <div class="cdh-whatsapp-img cdh-whatsapp-img-3">
+                        <img src="/s/pages/assets/images/rpkB7whatsappimage20251205at05.40.17.jpg" alt="Ask Doubts">
+                    </div>
+                    <div class="cdh-whatsapp-img cdh-whatsapp-img-4">
+                        <img src="/s/pages/assets/images/qRl41img20250411120744.jpg" alt="Success Stories">
+                    </div>
+                    
+                    <!-- Floating Tags -->
+                    <div class="cdh-whatsapp-tag cdh-tag-1">ask-doubts</div>
+                    <div class="cdh-whatsapp-tag cdh-tag-2">success-stories</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="cdh-section cdh-faq" id="cdh-faq">
+        <div class="cdh-container">
+            <div class="cdh-section-header">
+                <span class="cdh-caption">FAQ</span>
+                <h2 class="cdh-h1">Frequently Asked <span class="cdh-gradient-text">Questions</span></h2>
+            </div>
+            <div class="cdh-faq-grid">
+                <div class="cdh-faq-item">
+                    <button class="cdh-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Is this course suitable for freshers?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="cdh-faq-answer">
+                        <div class="cdh-faq-answer-content">
+                            Absolutely! We start from fundamentals. Many of our successful students were complete freshers who now work at top MNCs.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cdh-faq-item">
+                    <button class="cdh-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        What if I miss a live session?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="cdh-faq-answer">
+                        <div class="cdh-faq-answer-content">
+                            All sessions are recorded and available for review. Plus, with the Current + Next Batch plan, you can attend the missed topics in the next batch.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cdh-faq-item">
+                    <button class="cdh-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Do you provide placement assistance?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="cdh-faq-answer">
+                        <div class="cdh-faq-answer-content">
+                            Yes! We provide daily MNC referrals, weekly mock interviews, resume optimization, and direct connections to hiring companies.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cdh-faq-item">
+                    <button class="cdh-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        What technologies will I learn?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="cdh-faq-answer">
+                        <div class="cdh-faq-answer-content">
+                            AWS, Azure, GCP, Docker, Kubernetes, Terraform, Ansible, Jenkins, Linux, Python, Git, Prometheus, Grafana, and AI-powered automation.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cdh-faq-item">
+                    <button class="cdh-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Can I try before I pay?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="cdh-faq-answer">
+                        <div class="cdh-faq-answer-content">
+                            Yes! Join our 4-day FREE demo sessions to experience our teaching quality firsthand. Join our WhatsApp community to get started.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cdh-faq-item">
+                    <button class="cdh-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Is EMI available?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="cdh-faq-answer">
+                        <div class="cdh-faq-answer-content">
+                            Yes, we offer flexible EMI options. Contact our team for details on payment plans that work for you.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="cdh-footer">
+        <div class="cdh-container">
+            <!-- Community Banner -->
+            <div class="cdh-footer-banner">
+                <h3>We're Not an Institute — <span class="cdh-gradient-text">We're a Community</span></h3>
+                <p>Join 1,00,000+ Cloud &amp; DevOps Engineers who learn together, grow together, and succeed together.</p>
+                <div class="cdh-footer-banner-ctas">
+                    <a href="https://chat.whatsapp.com/HtdFsTVrYYwLe5uGUWcCqA" target="_blank" class="cdh-btn cdh-btn-primary">
+                        <i class="fa-brands fa-whatsapp"></i> Join FREE Demo
+                    </a>
+                    <a href="https://www.clouddevopshub.com/s/pages/roadmap" target="_blank" class="cdh-btn cdh-btn-secondary">
+                        <i class="fa-solid fa-map"></i> View Roadmap
+                    </a>
+                </div>
+            </div>
+            
+            <div class="cdh-footer-grid">
+                <div class="cdh-footer-brand">
+                    <h3 class="cdh-gradient-text">CloudDevOpsHub</h3>
+                    <p class="cdh-footer-tagline">🚀 India's Biggest Community of Cloud &amp; DevOps Engineers</p>
+                    <p>Not just training — a movement. Since 2012, we've been helping engineers crack high-package jobs at top MNCs. 1,00,000+ community members. 41+ batches. 6000+ transformations.</p>
+                    <div class="cdh-footer-social">
+                        <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                
+                <div class="cdh-footer-links">
+                    <h4>🎯 Quick Links</h4>
+                    <a href="https://www.clouddevopshub.com/s/pages/best-free-aws-gcp-devops-ai-course-for-40lpa-high-paying-jobs" target="_blank"><i class="fa-solid fa-rocket" style="color: #FF6B00;"></i> Enroll Now</a>
+                    <a href="https://www.clouddevopshub.com/s/pages/best-free-aws-gcp-devops-ai-course-for-40lpa-high-paying-jobs" target="_blank"><i class="fa-solid fa-tag" style="color: #FF6B00;"></i> View Pricing</a>
+                    <a href="https://chat.whatsapp.com/HtdFsTVrYYwLe5uGUWcCqA" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> Join FREE Demo</a>
+                    <a href="https://www.clouddevopshub.com/s/pages/roadmap" target="_blank"><i class="fa-solid fa-map" style="color: #FF6B00;"></i> View Roadmap</a>
+                </div>
+                
+                <div class="cdh-footer-links">
+                    <h4>📚 Resources</h4>
+                    <a href="#">Success Stories</a>
+                    <a href="#">Blog &amp; Articles</a>
+                    <a href="#">Download App</a>
+                    <a href="#">Study Materials</a>
+                </div>
+                
+                <!-- ✏️ EDIT: Contact Details -->
+                <div class="cdh-footer-links">
+                    <h4>📞 Contact Us</h4>
+                    <a href="tel:+919993445100"><i class="fa-solid fa-phone" style="color: #10B981;"></i> +91-9993445100</a>
+                    <a href="mailto:contact@clouddevopshub.com"><i class="fa-solid fa-envelope" style="color: #FF6B00;"></i> contact@clouddevopshub.com</a>
+                    <a href="https://wa.me/919993445100" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> WhatsApp Support</a>
+                </div>
+            </div>
+            
+            <!-- Tech Stack -->
+            <div class="cdh-footer-tech">
+                <p>Technologies We Cover</p>
+                <div class="cdh-footer-tech-icons">
+                    <i class="devicon-amazonwebservices-plain-wordmark" style="color: #FF9900;"></i>
+                    <i class="devicon-azure-plain" style="color: #0078D4;"></i>
+                    <i class="devicon-googlecloud-plain" style="color: #4285F4;"></i>
+                    <i class="devicon-docker-plain" style="color: #2496ED;"></i>
+                    <i class="devicon-kubernetes-plain" style="color: #326CE5;"></i>
+                    <i class="devicon-terraform-plain" style="color: #7B42BC;"></i>
+                    <i class="devicon-jenkins-line" style="color: #D33833;"></i>
+                    <i class="devicon-ansible-plain" style="color: #EE0000;"></i>
+                    <i class="devicon-linux-plain" style="color: #FCC624;"></i>
+                    <i class="devicon-python-plain" style="color: #3776AB;"></i>
+                </div>
+            </div>
+            
+            <div class="cdh-footer-bottom">
+                <p>© 2025 CloudDevOpsHub Community. All rights reserved. | We're Engineers, Not Just Trainers 💪</p>
+                <div>
+                    <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY CTA -->
+    <div class="cdh-sticky">
+        <!-- ✏️ EDIT: Sticky Bar Text -->
+        <span class="cdh-sticky-text">🚀 <strong>Batch 42</strong> starts Dec 18 — Only 15 seats left!</span>
+        <div class="cdh-sticky-ctas">
+            <a href="https://www.clouddevopshub.com/s/pages/roadmap" target="_blank" class="cdh-btn cdh-btn-secondary cdh-btn-sm">
+                <i class="fa-brands fa-whatsapp"></i> Roadmap
+            </a>
+            <a href="https://www.clouddevopshub.com/s/pages/best-free-aws-gcp-devops-ai-course-for-40lpa-high-paying-jobs" target="_blank" class="cdh-btn cdh-btn-primary cdh-btn-sm">
+                Enroll Now
+            </a>
+        </div>
+    </div>
+
+</div><script>
+(function() {
+    // ✏️ EDIT: Change this date to your batch start date
+    var targetDate = new Date('2025-12-18T08:00:00+05:30').getTime();
+    
+    function updateCountdown() {
+        var now = new Date().getTime();
+        var diff = targetDate - now;
+        
+        if (diff > 0) {
+            var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            var secs = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            var daysEl = document.getElementById('cdh-days');
+            var hoursEl = document.getElementById('cdh-hours');
+            var minsEl = document.getElementById('cdh-mins');
+            var secsEl = document.getElementById('cdh-secs');
+            
+            if (daysEl) daysEl.textContent = days < 10 ? '0' + days : days;
+            if (hoursEl) hoursEl.textContent = hours < 10 ? '0' + hours : hours;
+            if (minsEl) minsEl.textContent = mins < 10 ? '0' + mins : mins;
+            if (secsEl) secsEl.textContent = secs < 10 ? '0' + secs : secs;
+        }
+    }
+    
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+})();
+</script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Pacifico" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Pacifico" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Pacifico" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Pacifico" rel="stylesheet">
